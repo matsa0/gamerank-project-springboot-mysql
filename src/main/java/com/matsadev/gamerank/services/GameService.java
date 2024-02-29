@@ -1,6 +1,7 @@
 package com.matsadev.gamerank.services;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.matsadev.gamerank.entities.Game;
 import com.matsadev.gamerank.repositories.GameRepository;
+import com.matsadev.gamerank.services.exceptions.ResourceNotFoundException;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class GameService {
@@ -17,9 +21,13 @@ public class GameService {
     private GameRepository repository;
 
     public Game findById(@PathVariable Long id) {
-        Optional<Game> obj = repository.findById(id);
-
-        return obj.get();
+        try {
+            Optional<Game> obj = repository.findById(id);
+    
+            return obj.get();
+        } catch(NoSuchElementException e) {
+            throw new ResourceNotFoundException(id);
+        }
     }
 
     public List<Game> findAll() {
@@ -31,13 +39,21 @@ public class GameService {
     }
 
     public void delete(Long id) {
-        repository.deleteById(id);
+        try {
+            repository.deleteById(id);
+        } catch(RuntimeException e) {
+            throw new ResourceNotFoundException(id);
+        }
     }
 
     public Game update(Long id, Game game) {
-        Game entity = repository.getReferenceById(id);
-        updateData(entity, game);
-        return repository.save(entity);
+        try {
+            Game entity = repository.getReferenceById(id);
+            updateData(entity, game);
+            return repository.save(entity);
+        } catch(EntityNotFoundException e) {
+            throw new ResourceNotFoundException(id);    
+        }
     }
 
     public void updateData(Game entity, Game game) {
