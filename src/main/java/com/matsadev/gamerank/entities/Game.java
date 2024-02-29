@@ -16,7 +16,7 @@ public class Game implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String name;
     private int year;
     private String genre;
@@ -29,7 +29,7 @@ public class Game implements Serializable {
     @Column(length = 1200)
     private String long_desc;
     
-    public Game(Integer id, String name, int year, String genre, double avg_note, String url_imagem, String short_desc, String long_desc) {
+    public Game(Long id, String name, int year, String genre, double avg_note, String url_imagem, String short_desc, String long_desc) {
         this.id = id;
         this.name = name;
         this.year = year;
@@ -43,10 +43,10 @@ public class Game implements Serializable {
     public Game() {
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getName() {
