@@ -1,12 +1,16 @@
 package com.matsadev.gamerank.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -28,6 +32,9 @@ public class Game implements Serializable {
 
     @Column(length = 1200)
     private String long_desc;
+
+    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Review> reviews = new ArrayList<>();
     
     public Game(Long id, String name, int year, String genre, double avg_note, String url_imagem, String short_desc, String long_desc) {
         this.id = id;
