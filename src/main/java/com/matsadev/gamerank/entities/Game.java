@@ -10,6 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -35,6 +36,9 @@ public class Game implements Serializable {
 
     @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviews = new ArrayList<>();
+
+    @ManyToMany(mappedBy = "games")
+    private List<Wishlist> wishlists = new ArrayList<>();
     
     public Game(Long id, String name, int year, String genre, double avg_note, String url_imagem, String short_desc, String long_desc) {
         this.id = id;
@@ -97,6 +101,9 @@ public class Game implements Serializable {
     }
     public void setLong_desc(String long_desc) {
         this.long_desc = long_desc;
+    }
+    public List<Review> getReviews() {
+        return reviews;
     }
 
     @Override

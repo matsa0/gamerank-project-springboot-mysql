@@ -15,13 +15,15 @@ import com.matsadev.gamerank.repositories.ReviewRepository;
 import com.matsadev.gamerank.repositories.UserRepository;
 
 
+
+@SuppressWarnings("unused")
 @Configuration
 @Profile("test")
 public class TestConfig implements CommandLineRunner {
 
     @Autowired
     private GameRepository gameRepository;
-
+    
     @Autowired
     private UserRepository userRepository;
 
@@ -31,15 +33,7 @@ public class TestConfig implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         
-        Optional<Game> optG1 = gameRepository.findById((long) 1);
-        Optional<User> optU1 = userRepository.findById((long) 1);
 
-        Game g1 = optG1.get();
-        User u1 = optU1.get();
-
-        Review r1 = new Review(u1, g1, null, "Resident Evil 4 é uma experiência incrível.", 5);
-
-        reviewRepository.save(r1);
     }
     
 }
