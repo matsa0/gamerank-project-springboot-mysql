@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from "axios"
 
 //componente Adminpage - exportado e pode ser importado em outro lugar
 export default function Adminpage() {
+
+    const [games, setGames] = useState([])
+
+    useEffect(()=>{
+        loadGames()
+    },[])
+
+    const loadGames=async()=>{
+        const result =await axios.get("http://localhost:8080/games")
+        setGames(result.data)
+    }
+
     return (
-        <div classname='container'>
+        <div className='container'>
             <div className='py-4'>
-                <table className="table border shadow m-10">
+                <table className="table border shadow">
                     <thead>
                         <tr>
                         <th scope="col">ID</th>
@@ -14,25 +27,25 @@ export default function Adminpage() {
                         <th scope="col">Gênero</th>
                         <th scope="col">Desc curta</th>
                         <th scope="col">Desc completa</th>
+                        <th scope="col"> - </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Olá, Mundo!</td>
-                            <td>Olá, Mundo! Me chamo Matheus</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>Olá, Mundo!</td>
-                            <td>Olá, Mundo! Me chamo Matheus</td>
-                        </tr>
+
+                        {
+                            games.map((game)=> (
+                                <tr key = {game.id}>
+                                    <th scope="row">{game.id}</th>
+                                    <td>{game.name}</td>
+                                    <td>{game.year}</td>
+                                    <td>{game.genre}</td>
+                                    <td>{game.short_desc}</td>
+                                    <td>{game.long_desc}</td>
+                                    <td><i class="bi bi-x-square-fill"></i></td>
+                                </tr>
+                            )) //create new array for call the api
+                        }
+
                     </tbody>
                 </table>
             </div>
