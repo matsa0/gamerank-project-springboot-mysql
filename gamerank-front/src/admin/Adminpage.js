@@ -3,15 +3,18 @@ import axios from "axios"
 
 //componente Adminpage - exportado e pode ser importado em outro lugar
 export default function Adminpage() {
+    //State que armazena lista de jogos
+    const [games, setGames] = useState([]) //hook react
 
-    const [games, setGames] = useState([])
-
+    //hook react que está sendo utilizado para buscar dados da api
     useEffect(()=>{
+        //side effect logic
         loadGames()
-    },[])
+    },[]) //dependecie array
 
-    const loadGames=async()=>{
-        const result =await axios.get("http://localhost:8080/games")
+    //função assíncrona para buscar dados da API e montar o componente
+    const loadGames = async() => {
+        const result = await axios.get("http://localhost:8080/games") //REQUISIÇÃO GET À API
         setGames(result.data)
     }
 
@@ -27,13 +30,13 @@ export default function Adminpage() {
                         <th scope="col">Gênero</th>
                         <th scope="col">Desc curta</th>
                         <th scope="col">Desc completa</th>
-                        <th scope="col"> - </th>
+                        <th scope="col">Ação</th>
                         </tr>
                     </thead>
                     <tbody>
 
                         {
-                            games.map((game)=> (
+                            games.map((game)=> ( //.map itera sobre a lista de jogos
                                 <tr key = {game.id}>
                                     <th scope="row">{game.id}</th>
                                     <td>{game.name}</td>
@@ -41,7 +44,13 @@ export default function Adminpage() {
                                     <td>{game.genre}</td>
                                     <td>{game.short_desc}</td>
                                     <td>{game.long_desc}</td>
-                                    <td><i class="bi bi-x-square-fill"></i></td>
+                                    <td className = "align-middle">
+                                        <div className = "d-flex ">
+                                            <i className = "btn btn-outline-success bi bi-eye "></i>
+                                            <i className = "btn btn-outline-primary bi bi-arrow-repeat"></i>
+                                            <i className = "btn btn-outline-danger bi bi-dash-lg"></i>
+                                        </div>
+                                    </td>
                                 </tr>
                             )) //create new array for call the api
                         }
