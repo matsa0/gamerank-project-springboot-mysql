@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function NavbarAdmin() {
     return (
         <nav class="navbar navbar-dark bg-dark justify-content-between p-3">
-            <a class="navbar-brand">Adminpage</a>
-            <form class="form-inline">
-                <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Adicionar Jogo</button>
-            </form>
+            <div className="container-fluid">
+                <a class="navbar-brand">Adminpage</a>
+                <form class="form-inline">
+                    <Link className="btn btn-outline-light my-2 my-sm-0" to = {"/add_game"}>Adicionar Jogo</Link>
+                </form>
+            </div>
         </nav>
     )
 }

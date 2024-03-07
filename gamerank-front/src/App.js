@@ -4,6 +4,7 @@ import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 import Adminpage from './admin/Adminpage';
 import { NavbarAdmin } from './admin/NavbarAdmin';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import InsertForm from './admin/InsertForm';
 
 function App() {
   return (
@@ -12,9 +13,17 @@ function App() {
 
 
         <Routes>
-          <Route exact path= "/" element = {<>
+          <Route exact path= "/" element = {
+          <>
             <NavbarAdmin />
             <Adminpage />
+          </>} 
+          />
+
+          <Route exact path = "/add_game" element = {
+          <>
+            <NavbarAdmin />
+            <InsertForm />
           </>} 
           />
         </Routes>
