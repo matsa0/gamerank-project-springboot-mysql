@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
-export default function InsertForm() {
+export default function GameForm() {
 
     let navigate = useNavigate()
 
