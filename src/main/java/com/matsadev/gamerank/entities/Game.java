@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -102,6 +104,7 @@ public class Game implements Serializable {
     public void setLong_desc(String long_desc) {
         this.long_desc = long_desc;
     }
+    @JsonIgnore
     public List<Review> getReviews() {
         return reviews;
     }
