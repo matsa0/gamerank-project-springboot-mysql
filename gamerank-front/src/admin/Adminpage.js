@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
+import { Link } from "react-router-dom";
 
 //componente Adminpage - exportado e pode ser importado em outro lugar
 export default function Adminpage() {
@@ -47,7 +48,7 @@ export default function Adminpage() {
                                     <td className = "align-middle">
                                         <div className = "d-flex ">
                                             <i className = "btn btn-outline-success bi bi-eye "></i>
-                                            <i className = "btn btn-outline-primary bi bi-arrow-repeat"></i>
+                                            <Link className = "btn btn-outline-primary bi bi-arrow-repeat" to={`/update_game/${game.id}`}/>
                                             <i className = "btn btn-outline-danger bi bi-dash-lg"></i>
                                         </div>
                                     </td>

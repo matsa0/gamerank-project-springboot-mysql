@@ -8,7 +8,7 @@ export function NavbarAdmin() {
                 <a class="navbar-brand">Adminpage</a>
                 <form class="form-inline">
                     <Link className="btn btn-outline-light my-2 my-sm-0" to = {"/add_game"}>Adicionar Jogo</Link>
-                    <Link className="btn btn-outline-light my-2 my-sm-0" to = {"/add_user"}>Adicionar Usuário</Link>
+                    <Link className="btn btn-outline-light my-2 my-sm-0 mx-3" to = {"/add_user"}>Adicionar Usuário</Link>
                 </form>
             </div>
         </nav>

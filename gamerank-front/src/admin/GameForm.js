@@ -101,7 +101,7 @@ export default function GameForm() {
                         </div>
 
                         <button type="submit" className="btn btn-success mt-4">Adicionar</button>
-                        <Link className="btn btn-danger mx-3 mt-4" to="/">Voltar</Link>
+                        <Link className="btn btn-danger mx-3 mt-4" to={"/"}>Voltar</Link>
                     </form>
                 </div>
             </div>

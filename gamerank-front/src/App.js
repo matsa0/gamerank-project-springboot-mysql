@@ -6,6 +6,7 @@ import { NavbarAdmin } from './admin/NavbarAdmin';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GameForm from './admin/GameForm';
 import UserForm from './admin/UserForm';
+import UpdateForm from './admin/UpdateForm'
 
 function App() {
   return (
@@ -28,12 +29,20 @@ function App() {
           </>} 
           />
 
+          <Route exact path = "/update_game/:id" element = {
+          <>
+            <NavbarAdmin />
+            <UpdateForm />
+          </>} 
+          />
+
           <Route exact path = "/add_user" element = {
           <>
             <NavbarAdmin />
             <UserForm />
           </>} 
           />
+          
 
 
 
