@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 //componente Adminpage - exportado e pode ser importado em outro lugar
 export default function Adminpage() {
     //State que armazena lista de jogos
     const [games, setGames] = useState([]) //hook react
+
+    const {id} = useParams()
 
     //hook react que está sendo utilizado para buscar dados da api
     useEffect(()=>{
@@ -17,6 +19,11 @@ export default function Adminpage() {
     const loadGames = async() => {
         const result = await axios.get("http://localhost:8080/games") //REQUISIÇÃO GET À API
         setGames(result.data)
+    }
+
+    const deleteGame= async(id) => {
+        await axios.delete(`http://localhost:8080/games/${id}`)
+        loadGames()
     }
 
     return (
@@ -49,7 +56,8 @@ export default function Adminpage() {
                                         <div className = "d-flex ">
                                             <i className = "btn btn-outline-success bi bi-eye "></i>
                                             <Link className = "btn btn-outline-primary bi bi-arrow-repeat" to={`/update_game/${game.id}`}/>
-                                            <i className = "btn btn-outline-danger bi bi-dash-lg"></i>
+                                            <i className = "btn btn-outline-danger bi bi-dash-lg"
+                                            onClick={()=>deleteGame(game.id)}></i>
                                         </div>
                                     </td>
                                 </tr>
