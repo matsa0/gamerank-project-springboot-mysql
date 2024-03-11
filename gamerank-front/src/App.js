@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GameForm from './admin/GameForm';
 import UserForm from './admin/UserForm';
 import UpdateForm from './admin/UpdateForm'
+import ViewGame from './admin/ViewGame';
 
 function App() {
   return (
@@ -43,6 +44,14 @@ function App() {
           </>} 
           />
           
+          <Route exatct path = "/view_game/:id" element = {
+            <>
+              <NavbarAdmin />
+              <ViewGame />
+            </>
+          }
+          
+          />
 
 
 
