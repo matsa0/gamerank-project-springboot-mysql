@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { Link, useParams } from "react-router-dom";
-import ViewGame from './ViewGame';
 
 //componente Adminpage - exportado e pode ser importado em outro lugar
 export default function Adminpage() {
     //State que armazena lista de jogos
     const [games, setGames] = useState([]) //hook react
-
-    const {id} = useParams()
 
     //hook react que está sendo utilizado para buscar dados da api
     useEffect(()=>{
@@ -30,6 +27,7 @@ export default function Adminpage() {
     return (
         <div className='container'>
             <div className='py-4'>
+                <h2 className='mb-4'>Jogos</h2>
                 <table className="table border shadow">
                     <thead>
                         <tr>
@@ -57,7 +55,7 @@ export default function Adminpage() {
                                         <div className = "d-flex ">
                                             <Link className = "btn btn-outline-success bi bi-eye" to={`/view_game/${game.id}`} />
 
-                                            <Link className = "btn btn-outline-primary bi bi-arrow-repeat" to={`/update_game/${game.id}`}/>
+                                            <Link className = "btn btn-outline-primary bi bi-arrow-repeat mx-3" to={`/update_game/${game.id}`}/>
 
                                             <i className = "btn btn-outline-danger bi bi-dash-lg"
                                             onClick={()=>deleteGame(game.id)}></i>
@@ -66,10 +64,10 @@ export default function Adminpage() {
                                 </tr>
                             )) //create new array for call the api
                         }
-
                     </tbody>
                 </table>
             </div>
+            <Link className = "btn btn-primary mx-3" to={"/users"}>Usuários <i class="bi bi-arrow-right"></i></Link>
         </div>
     )
 }

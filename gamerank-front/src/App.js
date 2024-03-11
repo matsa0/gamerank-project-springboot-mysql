@@ -1,13 +1,14 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
-import Adminpage from './admin/Adminpage';
+import Adminpage from './admin/game/AdminpageGames';
 import { NavbarAdmin } from './admin/NavbarAdmin';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import GameForm from './admin/GameForm';
-import UserForm from './admin/UserForm';
-import UpdateForm from './admin/UpdateForm'
-import ViewGame from './admin/ViewGame';
+import GameForm from './admin/game/GameForm';
+import UserForm from './admin/user/UserForm';
+import UpdateForm from './admin/game/UpdateForm'
+import ViewGame from './admin/game/ViewGame';
+import AdminpageUsers from './admin/user/AdminpageUsers';
 
 function App() {
   return (
@@ -53,6 +54,12 @@ function App() {
           
           />
 
+          <Route exatct path = "/users" element = {
+            <>
+              <NavbarAdmin />
+              <AdminpageUsers />
+            </>
+          }/>
 
 
         </Routes>

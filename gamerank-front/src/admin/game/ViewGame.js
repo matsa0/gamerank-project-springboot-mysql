@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from 'axios';
 
 export default function ViewGame() {
@@ -12,14 +12,6 @@ export default function ViewGame() {
     const[short_desc, setSDesc] = useState("")
     const[long_desc, setLDesc] = useState("")
 
-    const game_data = {
-        id: id,
-        name: name,
-        year: year,
-        genre: genre,
-        short_desc: short_desc,
-        long_desc: long_desc
-    }
 
     useEffect(() => {
         loadGame()
@@ -44,19 +36,36 @@ export default function ViewGame() {
 
     return (
         <div className="container ">
-            <div className="row ">
-                <div className="col-md-10 border shadow mx-auto mt-4 ">
-                    <p>ID: {id}</p>
+            <div className="row">
+                <div className="col-md-10 border shadow mx-auto mt-4 p-4">
+                    <h2 className="mb-4">Visualizar Jogo</h2>
                     <hr/>
-                    <p>Name: {name}</p>
+
+                    <h5 className="font-weight-bold">ID</h5>
+                    <p>{id}</p>
                     <hr/>
-                    <p>Year: {year}</p>
+
+                    <h5 className="font-weight-bold">Name</h5>
+                    <p>{name}</p>
                     <hr/>
-                    <p>Genre: {genre}</p>
+
+                    <h5 className="font-weight-bold">Year</h5>
+                    <p>{year}</p>
                     <hr/>
-                    <p>Short Description: {short_desc}</p>
+
+                    <h5 className="font-weight-bold">Genre</h5>
+                    <p>{genre}</p>
                     <hr/>
-                    <p>Long Description: {long_desc}</p>
+
+                    <h5 className="font-weight-bold">Short Description</h5>
+                    <p>{short_desc}</p>
+                    <hr/>
+
+                    <h5 className="font-weight-bold">Long Description</h5>
+                    <p>{long_desc}</p>
+                    <hr/>
+
+                    <Link className="btn btn-primary mx-3 mt-4" to={"/"}>Voltar</Link>
                 </div>
             </div>
         </div>
