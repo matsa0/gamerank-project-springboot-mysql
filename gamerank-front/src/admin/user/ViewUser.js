@@ -49,7 +49,7 @@ export default function ViewUser() {
                     <hr/>
 
 
-                    <Link className="btn btn-primary mx-3 mt-4" to={"/users"}>Voltar</Link>
+                    <Link className="btn btn-primary mx-3 mt-4" to={"/admin_users"}>Voltar</Link>
                 </div>
             </div>
         </div>

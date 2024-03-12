@@ -10,6 +10,8 @@ import ViewGame from './admin/game/ViewGame';
 import AdminpageUsers from './admin/user/AdminpageUsers';
 import UserForm from './admin/user/UserForm';
 import ViewUser from './admin/user/ViewUser';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
 
         {/* ADMINPAGE - GAME */}
         <Routes>
-          <Route exact path= "/" element = {
+          <Route exact path= "/admin_games" element = {
           <>
             <NavbarAdmin />
             <Adminpage />
@@ -49,7 +51,7 @@ function App() {
           />
 
           {/* ADMINPAGE - USERS */}
-          <Route exact path = "/users" element = {
+          <Route exact path = "/admin_users" element = {
             <>
               <NavbarAdmin />
               <AdminpageUsers />
@@ -70,7 +72,23 @@ function App() {
             </>
           }/>
 
+          
+          {/* LOGIN & REGISTER */}
+          <Route exact path = "/" element = {
+            <>
+              <Login />
+            </>
+          }/>
 
+          <Route exact path = "/register" element = {
+            <>
+              <Register />
+            </>
+          }
+          />
+
+
+          
         </Routes>
 
 

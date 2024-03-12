@@ -55,7 +55,7 @@ export default function AdminpageUsers() {
                     </table>
                 </div>
             </div>
-            <Link className = "btn btn-primary mx-3" to={"/"}><i class="bi bi-arrow-left"></i> Jogos</Link>
+            <Link className = "btn btn-primary mx-3" to={"/admin_games"}><i class="bi bi-arrow-left"></i> Jogos</Link>
         </div>
     )
 }

@@ -52,7 +52,7 @@ export default function GameForm() {
         try {
             const response = await axios.post("http://localhost:8080/games", game_data)
             alert("Jogo adicionado com sucesso! ", response.data)
-            navigate("/")
+            navigate("/admin_games")
         } 
         catch (error) {
             alert("Erro ao adicionar o jogo! ", error.message)
@@ -68,40 +68,40 @@ export default function GameForm() {
                         <div className="form-group mb-2">
                             <label for="exampleInputName" className='mb-1'>Nome</label>
                             <input type="text" className="form-control" id="exampleInputName" placeholder="Nome" value={name} 
-                            onChange={(e)=>onNameChange(e)} 
+                            onChange={(e)=>onNameChange(e)} required
                             /> {/*Sempre que onChange acontecer, ele chamará a função*/}
                         </div>
                         <div className="form-group mb-2">
                             <label for="exampleInputYear" className='mb-1'>Ano de lançamento</label>
                             <input type="number" className="form-control" id="exampleInputYear" placeholder="Ano de lançamento" 
                             value={year}
-                            onChange={(e)=>onYearChange(e)}
+                            onChange={(e)=>onYearChange(e)} required
                             />
                         </div>
                         <div className="form-group mb-2">
                             <label for="exampleInputGenre" className='mb-1'>Gênero</label>
                             <input type="text" className="form-control" id="exampleInputGenre" placeholder="Gênero" 
                             value={genre} 
-                            onChange={(e)=>onGenreChange(e)}
+                            onChange={(e)=>onGenreChange(e)} required
                             />
                         </div>
                         <div className="form-group mb-2">
                             <label for="exampleInputSDesc" className='mb-1'>Descrição curta</label>
                             <input type="text" className="form-control" id="exampleInputSDesc" placeholder="Descrição curta" 
                             value={short_desc} 
-                            onChange={(e)=>onSDescChange(e)}
+                            onChange={(e)=>onSDescChange(e)} required
                             />
                         </div>
                         <div className="form-group mb-2">
                             <label for="exampleInputLDesc" className='mb-1'>Descrição completa</label>
                             <input type="text" className="form-control" id="exampleInputLDesc" placeholder="Descrição Completa" 
                             value={long_desc} 
-                            onChange={(e)=>onLDescChange(e)}
+                            onChange={(e)=>onLDescChange(e)} required
                             />
                         </div>
 
                         <button type="submit" className="btn btn-success mt-4">Adicionar</button>
-                        <Link className="btn btn-danger mx-3 mt-4" to={"/"}>Voltar</Link>
+                        <Link className="btn btn-danger mx-3 mt-4" to={"/admin_games"}>Voltar</Link>
                     </form>
                 </div>
             </div>

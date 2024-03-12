@@ -67,7 +67,7 @@ export default function Adminpage() {
                     </tbody>
                 </table>
             </div>
-            <Link className = "btn btn-primary mx-3" to={"/users"}>Usuários <i class="bi bi-arrow-right"></i></Link>
+            <Link className = "btn btn-primary mx-3" to={"/admin_users"}>Usuários <i class="bi bi-arrow-right"></i></Link>
         </div>
     )
 }

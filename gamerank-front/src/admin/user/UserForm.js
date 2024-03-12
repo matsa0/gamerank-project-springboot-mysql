@@ -29,7 +29,7 @@ export default function UserForm() {
         try {
             const response = await axios.post("http://localhost:8080/users", user_data)
             alert("Usuário adicionado com sucesso! ", response.data)
-            navigate("/users")
+            navigate("/admin_users")
         }
         catch(error) {
             alert("Usuário não adicionado! ", error.message)
@@ -46,19 +46,19 @@ export default function UserForm() {
                         <div className="form-group mb-2">
                             <label for="exampleInputUsername" className='mb-1'>Username</label>
                             <input type="text" className="form-control" id="exampleInputUsername" placeholder="Username" value={username} 
-                            onChange={(e)=>onUsernameChange(e)} 
+                            onChange={(e)=>onUsernameChange(e)} required
                             /> {/*Sempre que onChange acontecer, ele chamará a função*/}
                         </div>
                         <div className="form-group mb-2">
                             <label for="exampleInputPassword" className='mb-1'>Senha</label>
                             <input type="password" className="form-control" id="exampleInputPassword" placeholder="Senha" 
                             value={password}
-                            onChange={(e)=>onPasswordChange(e)}
+                            onChange={(e)=>onPasswordChange(e)} required
                             />
                         </div>
 
                         <button type="submit" className="btn btn-success mt-4">Adicionar</button>
-                        <Link className="btn btn-danger mx-3 mt-4" to="/">Voltar</Link>
+                        <Link className="btn btn-danger mx-3 mt-4" to={"/admin_users"}>Voltar</Link>
                     </form>
                 </div>
             </div>

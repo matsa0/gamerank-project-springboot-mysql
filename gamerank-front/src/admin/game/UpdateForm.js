@@ -47,7 +47,7 @@ export default function InsertForm() {
         try {
             const response = await axios.put(`http://localhost:8080/games/${id}`, game_data)
             alert("Jogo atualizado com sucesso! ", response.data)
-            navigate("/")
+            navigate("/admin_games")
         }
         catch(error) {
             alert("Erro! Jogo não atualizado! ", error.message)
@@ -123,7 +123,7 @@ export default function InsertForm() {
                         </div>
 
                         <button type="submit" className="btn btn-success mt-4">Atualizar</button>
-                        <Link className="btn btn-danger mx-3 mt-4" to={"/"}>Voltar</Link>
+                        <Link className="btn btn-danger mx-3 mt-4" to={"/admin_games"}>Voltar</Link>
                     </form>
                 </div>
             </div>
