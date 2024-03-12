@@ -6,14 +6,14 @@ export default function AdminpageUsers() {
 
     const [users, setUsers] = useState([])
 
-    const loadUsers= async() => {
+    useEffect(() => {
+        loadUsers()
+    },[])
+
+    const loadUsers = async() => {
         const result = await axios.get("http://localhost:8080/users")
         setUsers(result.data)
     }
-
-    useEffect(() => {
-        loadUsers()
-    }, [])
 
     const deleteUsers= async(id) => {
         await axios.delete(`http://localhost:8080/users/${id}`)
@@ -42,13 +42,11 @@ export default function AdminpageUsers() {
                                         <th scope="row">{user.id}</th>
                                         <td>{user.username}</td>
                                         <td>{user.password}</td>
-                                        <td>
-                                        <Link className = "btn btn-outline-success bi bi-eye" to={"/users"} />
+                                        <td className = "align-middle">                                          
+                                            <Link className = "btn btn-outline-success bi bi-eye" to={`/view_user/${user.id}`} />
 
-                                        <Link className = "btn btn-outline-primary bi bi-arrow-repeat mx-3" to={"/users"}/>
-
-                                        <i className = "btn btn-outline-danger bi bi-dash-lg"
-                                        onClick={()=>deleteUsers(user.id)}></i>
+                                            <i className = "btn btn-outline-danger bi bi-dash-lg mx-2"
+                                            onClick={()=> deleteUsers(user.id)}></i>
                                         </td>
                                     </tr>
                                 ))

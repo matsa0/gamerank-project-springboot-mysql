@@ -29,7 +29,7 @@ export default function UserForm() {
         try {
             const response = await axios.post("http://localhost:8080/users", user_data)
             alert("Usuário adicionado com sucesso! ", response.data)
-            navigate("/")
+            navigate("/users")
         }
         catch(error) {
             alert("Usuário não adicionado! ", error.message)

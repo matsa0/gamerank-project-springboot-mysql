@@ -55,7 +55,7 @@ export default function Adminpage() {
                                         <div className = "d-flex ">
                                             <Link className = "btn btn-outline-success bi bi-eye" to={`/view_game/${game.id}`} />
 
-                                            <Link className = "btn btn-outline-primary bi bi-arrow-repeat mx-3" to={`/update_game/${game.id}`}/>
+                                            <Link className = "btn btn-outline-primary bi bi-arrow-repeat mx-2" to={`/update_game/${game.id}`}/>
 
                                             <i className = "btn btn-outline-danger bi bi-dash-lg"
                                             onClick={()=>deleteGame(game.id)}></i>
