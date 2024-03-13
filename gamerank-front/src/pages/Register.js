@@ -37,7 +37,7 @@ export default function Register() {
         <div className="container">
             <div className="row py-4">
                 <div className="col-md-6 mx-auto py-4 border shadow">
-                    <h2 className="mb-4">Bem vindo ao Gamerank!</h2>
+                    <h2 className="mb-4">Cadastre-se no Gamerank!</h2>
                     <form onSubmit={(e)=>onSubmit(e)}>
                         <div className="form-group mb-2">
                             <label for="exampleInputUsername" className='mb-1 text-left'>Username</label>

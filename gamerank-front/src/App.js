@@ -12,6 +12,7 @@ import UserForm from './admin/user/UserForm';
 import ViewUser from './admin/user/ViewUser';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -87,7 +88,12 @@ function App() {
           }
           />
 
-
+          {/*HOME*/}
+          <Route exact path = "/home" element = {
+            <>
+              <Home />
+            </>
+          }/>
           
         </Routes>
 
