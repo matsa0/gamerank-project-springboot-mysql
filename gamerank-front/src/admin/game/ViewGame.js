@@ -65,7 +65,7 @@ export default function ViewGame() {
                     <p>{long_desc}</p>
                     <hr/>
 
-                    <Link className="btn btn-primary mx-3 mt-4" to={"/"}>Voltar</Link>
+                    <Link className="btn btn-primary mx-3 mt-4" to={"/admin_games"}>Voltar</Link>
                 </div>
             </div>
         </div>

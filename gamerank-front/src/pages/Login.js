@@ -9,7 +9,7 @@ export default function Login() {
     const[username, setUsername] = useState("")
     const[password, setPassword] = useState("")
 
-    //onChange atualiza os estados criados em cima, enquanto o usuário digita, ou seja, captura informações dos inputs
+    //onVarChange atualiza os estados criados em cima, enquanto o usuário digita(evento onChange()), ou seja, captura informações dos inputs
     const onUsernameChange=(e) => {
         setUsername(e.target.value)
     }
