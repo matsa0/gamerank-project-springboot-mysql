@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.matsadev.gamerank.entities.Game;
 import com.matsadev.gamerank.repositories.GameRepository;
@@ -34,11 +35,11 @@ public class GameService {
         return repository.findAll();
     }
 
-    public Game insert(Game game) {
+    public Game insert(@RequestBody Game game) {
         return repository.save(game);
     }
 
-    public void delete(Long id) {
+    public void delete(@PathVariable Long id) {
         try {
             repository.deleteById(id);
         } catch(RuntimeException e) {
@@ -46,7 +47,7 @@ public class GameService {
         }
     }
 
-    public Game update(Long id, Game game) {
+    public Game update(@PathVariable Long id, @RequestBody Game game) {
         try {
             Game entity = repository.getReferenceById(id);
             updateData(entity, game);
@@ -56,7 +57,7 @@ public class GameService {
         }
     }
 
-    public void updateData(Game entity, Game game) {
+    public void updateData(@RequestBody Game entity, @RequestBody Game game) {
         entity.setName(game.getName());
         entity.setYear(game.getYear());
         entity.setGenre(game.getGenre());

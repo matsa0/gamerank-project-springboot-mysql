@@ -13,15 +13,15 @@ import ViewUser from './admin/user/ViewUser';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
+import FirstPage from './pages/FirstPage';
 
 function App() {
   return (
     <div className='App'>
       <Router>
 
-
-        {/* ADMINPAGE - GAME */}
         <Routes>
+          {/* ADMINPAGE - GAME */}
           <Route exact path= "/admin_games" element = {
           <>
             <NavbarAdmin />
@@ -51,6 +51,7 @@ function App() {
           }
           />
 
+
           {/* ADMINPAGE - USERS */}
           <Route exact path = "/admin_users" element = {
             <>
@@ -75,7 +76,7 @@ function App() {
 
           
           {/* LOGIN & REGISTER */}
-          <Route exact path = "/" element = {
+          <Route exact path = "/login" element = {
             <>
               <Login />
             </>
@@ -88,17 +89,26 @@ function App() {
           }
           />
 
-          {/*HOME*/}
+
+          {/* / & HOME*/}
+          <Route exact path = "/" element = {
+            <>
+              <FirstPage />
+            </>
+          }/>
+
           <Route exact path = "/home" element = {
             <>
               <Home />
             </>
           }/>
           
+
+
+
         </Routes>
-
-
       </Router>
+
     </div>
   );
 }

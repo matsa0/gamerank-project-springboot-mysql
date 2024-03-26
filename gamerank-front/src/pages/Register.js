@@ -78,31 +78,29 @@ export default function Register() {
 
 
     return (
-        <div className="container">
-            <div className="row py-4">
-                <div className="col-md-6 mx-auto py-4 border shadow">
-                    <h2 className="mb-4">Cadastre-se no Gamerank!</h2>
-                    <form onSubmit={(e)=>onSubmit(e)}>
-                        <div className="form-group mb-2">
-                            <label for="exampleInputUsername" className='mb-1 text-left'>Username</label>
-                            <input type="text" className="form-control" placeholder="Username"
-                            onChange={(e)=>onUsernameChange(e)} value={username} required/>
-                        </div>
-                        <div className="form-group mb-2">
-                            <label for="exampleInputPassword" className='mb-1'>Senha</label>
-                            <input type="password" className="form-control" placeholder="Senha" 
-                            onChange={(e)=>onPasswordChange(e)} value={password} required/>
-                        </div>
-                        <div className="form-group mb-2">
-                            <label for="exampleInputConfirmPassword" className='mb-1'>Confirmar Senha</label>
-                            <input type="password" className="form-control" placeholder="Senha" 
-                            onChange={(e)=>onConfirmPassword(e)} value={confirmPassword} required/>
-                        </div>
+        <div className="register container d-flex justify-content-center align-items-center">
+            <div className="register-scope border shadow">
+                <h2 className="mb-4">Cadastre-se no Gamerank!</h2>
+                <form onSubmit={(e)=>onSubmit(e)}>
+                    <div className="form-group mb-2">
+                        <label for="exampleInputUsername" className='mb-1 text-left'>Username</label>
+                        <input type="text" className="form-control" placeholder="Username"
+                        onChange={(e)=>onUsernameChange(e)} value={username} required/>
+                    </div>
+                    <div className="form-group mb-2">
+                        <label for="exampleInputPassword" className='mb-1'>Senha</label>
+                        <input type="password" className="form-control" placeholder="Senha" 
+                        onChange={(e)=>onPasswordChange(e)} value={password} required/>
+                    </div>
+                    <div className="form-group mb-2">
+                        <label for="exampleInputConfirmPassword" className='mb-1'>Confirmar Senha</label>
+                        <input type="password" className="form-control" placeholder="Senha" 
+                        onChange={(e)=>onConfirmPassword(e)} value={confirmPassword} required/>
+                    </div>
 
-                        <button type="submit" className="btn btn-success mt-4">Cadastrar</button>
-                        <p className="mt-2">Voltar para área de <Link to={"/"}>Login!</Link></p>
-                    </form>
-                </div>
+                    <button type="submit" className="btn btn-success mt-4">Cadastrar</button>
+                    <p className="mt-2">Voltar para área de <Link to={"/login"}>Login!</Link></p>
+                </form>
             </div>
         </div>
     )

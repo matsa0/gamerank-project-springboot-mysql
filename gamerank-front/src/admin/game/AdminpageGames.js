@@ -11,7 +11,7 @@ export default function Adminpage() {
     useEffect(()=>{
         //side effect logic
         loadGames()
-    },[]) //dependecie array
+    },[]) //dependecy array
 
     //função assíncrona para buscar dados da API e montar o componente
     const loadGames = async() => {

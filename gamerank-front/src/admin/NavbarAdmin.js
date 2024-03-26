@@ -10,6 +10,7 @@ export function NavbarAdmin() {
                     <div className="">
                         <Link className="btn btn-outline-light my-2 my-sm-0" to = {"/add_game"}>Adicionar Jogo</Link>
                         <Link className="btn btn-outline-light my-2 my-sm-0 mx-3" to = {"/add_user"}>Adicionar Usuário</Link>
+                        <Link className="btn btn-light my-2 my-sm-0" to = {"/home"}>Gamerank!</Link>
                     </div>
                 </form>
             </div>

@@ -40,6 +40,10 @@ export default function Login() {
                 });
                 
                 if(valid_login == true) {
+                    if(username == "admin" && password == "admin") {
+                        navigate("/admin_games")
+                        return;
+                    }
                     navigate("/home")
                 }
                 else {
@@ -58,26 +62,24 @@ export default function Login() {
 
 
     return (
-        <div className="container">
-            <div className="row py-4">
-                <div className="col-md-6 mx-auto py-4 border shadow">
-                    <h2 className="mb-4">Entre no Gamerank!</h2>
-                    <form onSubmit={(e)=>onSubmit(e)}>
-                        <div className="form-group mb-2">
-                            <label for="exampleInputUsername" className='mb-1 text-left'>Username</label>
-                            <input type="text" className="form-control" placeholder="Username" 
-                            onChange={(e)=>onUsernameChange(e)} value={username} required/>
-                        </div>
-                        <div className="form-group mb-2">
-                            <label for="exampleInputPassword" className='mb-1'>Senha</label>
-                            <input type="password" className="form-control" placeholder="Senha" 
-                            onChange={(e)=>onPasswordChange(e)} value={password} required/>
-                        </div>
+        <div className="login container d-flex justify-content-center align-items-center">
+            <div className="login-scope border shadow">
+                <h2 className="mb-4">Entre no Gamerank!</h2>
+                <form onSubmit={(e)=>onSubmit(e)}>
+                    <div className="form-group mb-2">
+                        <label for="exampleInputUsername" className='mb-1 text-left'>Username</label>
+                        <input type="text" className="form-control" placeholder="Username" 
+                        onChange={(e)=>onUsernameChange(e)} value={username} required/>
+                    </div>
+                    <div className="form-group mb-2">
+                        <label for="exampleInputPassword" className='mb-1'>Senha</label>
+                        <input type="password" className="form-control" placeholder="Senha" 
+                        onChange={(e)=>onPasswordChange(e)} value={password} required/>
+                    </div>
 
-                        <button type="submit" className="btn btn-success mt-4">Entrar</button>
-                        <p className="mt-2">Não possui cadastro? <Link to={"/register"}>Cadastrar agora!</Link></p>
-                    </form>
-                </div>
+                    <button type="submit" className="btn btn-success mt-4">Entrar</button>
+                    <p className="mt-2">Não possui cadastro? <Link to={"/register"}>Cadastrar agora!</Link></p>
+                </form>
             </div>
         </div>
     )
