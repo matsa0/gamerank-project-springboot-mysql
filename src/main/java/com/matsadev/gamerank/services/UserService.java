@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.matsadev.gamerank.models.User;
+import com.matsadev.gamerank.models.dtos.UserDto;
 import com.matsadev.gamerank.repositories.UserRepository;
 import com.matsadev.gamerank.services.exceptions.ResourceNotFoundException;
 
@@ -27,8 +28,10 @@ public class UserService {
         return list;
     }
 
-    public User insert(User user) {
-        return repository.save(user);
+    public User insert(UserDto dto) {
+        User newUser = new User(dto);
+        
+        return repository.save(newUser);
     }
 
     public void delete(Long id) {

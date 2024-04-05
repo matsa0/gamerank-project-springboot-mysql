@@ -2,6 +2,8 @@ package com.matsadev.gamerank.models;
 
 import java.io.Serializable;
 
+import com.matsadev.gamerank.models.dtos.UserDto;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,4 +30,10 @@ public class User implements Serializable {
     private Long id;
     private String username;
     private String password;
+
+    //UserDto to User conversion
+    public User(UserDto dto) {
+        this.username = dto.username();
+        this.password = dto.password();
+    }
 }
