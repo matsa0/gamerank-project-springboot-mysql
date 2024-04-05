@@ -1,15 +1,12 @@
 package com.matsadev.gamerank.services;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import com.matsadev.gamerank.entities.Game;
+import com.matsadev.gamerank.models.Game;
 import com.matsadev.gamerank.repositories.GameRepository;
 import com.matsadev.gamerank.services.exceptions.ResourceNotFoundException;
 
@@ -21,25 +18,21 @@ public class GameService {
     @Autowired
     private GameRepository repository;
 
-    public Game findById(@PathVariable Long id) {
-        try {
-            Optional<Game> obj = repository.findById(id);
+    public Game findById(Long id) {
+        Optional<Game> obj = repository.findById(id);
     
-            return obj.get();
-        } catch(NoSuchElementException e) {
-            throw new ResourceNotFoundException(id);
-        }
+        return obj.orElseThrow(() -> new ResourceNotFoundException(id)); //caso o optional estiver vazio ele lança a exceção 
     }
 
     public List<Game> findAll() {
         return repository.findAll();
     }
 
-    public Game insert(@RequestBody Game game) {
+    public Game insert(Game game) {
         return repository.save(game);
     }
 
-    public void delete(@PathVariable Long id) {
+    public void delete(Long id) {
         try {
             repository.deleteById(id);
         } catch(RuntimeException e) {
@@ -47,7 +40,7 @@ public class GameService {
         }
     }
 
-    public Game update(@PathVariable Long id, @RequestBody Game game) {
+    public Game update(Long id, Game game) {
         try {
             Game entity = repository.getReferenceById(id);
             updateData(entity, game);
@@ -57,11 +50,10 @@ public class GameService {
         }
     }
 
-    public void updateData(@RequestBody Game entity, @RequestBody Game game) {
+    public void updateData(Game entity, Game game) {
         entity.setName(game.getName());
-        entity.setYear(game.getYear());
+        entity.setRelease_year(game.getRelease_year());
         entity.setGenre(game.getGenre());
-        entity.setShort_desc(game.getShort_desc());
-        entity.setLong_desc(game.getLong_desc());
+        entity.setDescription(game.getDescription());
     }
 }

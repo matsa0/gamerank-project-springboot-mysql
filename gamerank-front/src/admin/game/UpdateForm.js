@@ -10,7 +10,7 @@ export default function InsertForm() {
     const {id} = useParams()
 
     const[name, setName] = useState("")
-    const[year, setYear] = useState("")
+    const[release_year, setRYear] = useState("")
     const[genre, setGenre] = useState("")
     const[short_desc, setSDesc] = useState("")
     const[long_desc, setLDesc] = useState("")
@@ -20,7 +20,7 @@ export default function InsertForm() {
         setName(e.target.value)
     }
     const onYearChange=(e)=> {
-        setYear(e.target.value)
+        setRYear(e.target.value)
     }
     const onGenreChange=(e)=> {
         setGenre(e.target.value)
@@ -38,7 +38,7 @@ export default function InsertForm() {
         const game_data = {
             id: id,
             name: name,
-            year: year,
+            release_year: release_year,
             genre: genre,
             short_desc: short_desc,
             long_desc: long_desc
@@ -62,7 +62,7 @@ export default function InsertForm() {
             const game_data = result.data
 
             setName(game_data.name)
-            setYear(game_data.year)
+            setRYear(game_data.release_year)
             setGenre(game_data.genre)
             setSDesc(game_data.short_desc)
             setLDesc(game_data.long_desc)
@@ -96,7 +96,7 @@ export default function InsertForm() {
                         <div className="form-group mb-2">
                             <label for="exampleInputYear" className='mb-1'>Ano de lançamento</label>
                             <input type="number" className="form-control" id="exampleInputYear" placeholder="Ano de lançamento" 
-                            value={year}
+                            value={release_year}
                             onChange={(e)=>onYearChange(e)}
                             />
                         </div>

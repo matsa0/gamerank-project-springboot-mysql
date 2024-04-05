@@ -47,7 +47,7 @@ export default function Adminpage() {
                                 <tr key = {game.id}>
                                     <th scope="row">{game.id}</th>
                                     <td>{game.name}</td>
-                                    <td>{game.year}</td>
+                                    <td>{game.release_year}</td>
                                     <td>{game.genre}</td>
                                     <td>{game.short_desc}</td>
                                     <td>{game.long_desc}</td>

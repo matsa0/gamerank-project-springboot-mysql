@@ -7,7 +7,7 @@ export default function ViewGame() {
     const { id } = useParams()
 
     const[name, setName] = useState("")
-    const[year, setYear] = useState("")
+    const[release_year, setRYear] = useState("")
     const[genre, setGenre] = useState("")
     const[short_desc, setSDesc] = useState("")
     const[long_desc, setLDesc] = useState("")
@@ -24,7 +24,7 @@ export default function ViewGame() {
             const game_data = result.data
     
             setName(game_data.name)
-            setYear(game_data.year)
+            setRYear(game_data.release_year)
             setGenre(game_data.genre)
             setSDesc(game_data.short_desc)
             setLDesc(game_data.long_desc)
@@ -50,7 +50,7 @@ export default function ViewGame() {
                     <hr/>
 
                     <h5 className="font-weight-bold">Year</h5>
-                    <p>{year}</p>
+                    <p>{release_year}</p>
                     <hr/>
 
                     <h5 className="font-weight-bold">Genre</h5>

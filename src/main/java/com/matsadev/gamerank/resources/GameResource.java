@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.matsadev.gamerank.entities.Game;
+import com.matsadev.gamerank.models.Game;
 import com.matsadev.gamerank.services.GameService;
 
 import jakarta.annotation.Resource;
