@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.matsadev.gamerank.models.Game;
+import com.matsadev.gamerank.models.dtos.GameDto;
 import com.matsadev.gamerank.repositories.GameRepository;
 import com.matsadev.gamerank.services.exceptions.ResourceNotFoundException;
 
@@ -28,8 +29,10 @@ public class GameService {
         return repository.findAll();
     }
 
-    public Game insert(Game game) {
-        return repository.save(game);
+    public Game insert(GameDto dto) {
+        Game newGame = new Game(dto);
+
+        return repository.save(newGame);
     }
 
     public void delete(Long id) {

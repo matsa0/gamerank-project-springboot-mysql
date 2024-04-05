@@ -1,9 +1,9 @@
 package com.matsadev.gamerank.resources;
 
-import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.matsadev.gamerank.models.Game;
+import com.matsadev.gamerank.models.dtos.GameDto;
 import com.matsadev.gamerank.services.GameService;
 
 import jakarta.annotation.Resource;
+import jakarta.validation.Valid;
 
 @Resource
 @RestController
@@ -41,22 +42,21 @@ public class GameResource {
     public ResponseEntity<List<Game>> findAll() {
         List<Game> list = service.findAll();
 
-        return ResponseEntity.ok().body(list);
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Game> insert(@RequestBody Game game) {
-        game = service.insert(game);
+    public ResponseEntity<Game> insert(@RequestBody @Valid GameDto dto) {
+        Game newGame = service.insert(dto);
 
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(game.getId()).toUri();
-        return ResponseEntity.created(uri).body(game); //Retorna a resposta HTTP adequada 201 CREATED
+        return new ResponseEntity<>(newGame, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         service.delete(id);
 
-        return ResponseEntity.noContent().build(); //Retorna a resposta HTTP correta
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")
