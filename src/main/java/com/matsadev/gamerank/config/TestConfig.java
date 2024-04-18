@@ -8,8 +8,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.matsadev.gamerank.models.Game;
+import com.matsadev.gamerank.models.Review;
 import com.matsadev.gamerank.models.User;
 import com.matsadev.gamerank.repositories.GameRepository;
+import com.matsadev.gamerank.repositories.ReviewRepository;
 import com.matsadev.gamerank.repositories.UserRepository;
 
 
@@ -25,10 +27,20 @@ public class TestConfig implements CommandLineRunner {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private ReviewRepository reviewRepository;
+
     @Override
     public void run(String... args) throws Exception {
-          
 
+        User u1 = new User(null, "matsa", "6337311", null);
+        userRepository.save(u1);
+
+        Game g1 = new Game(null, "Snake Game", 1987, "Puzzle", 0, null, "Eat all the apples!");
+        gameRepository.save(g1);
+
+        Review r1 = new Review(null, "Very good game", 5, null);
+        reviewRepository.save(r1);
     }
     
 }

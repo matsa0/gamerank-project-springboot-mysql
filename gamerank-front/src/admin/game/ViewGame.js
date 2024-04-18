@@ -9,8 +9,7 @@ export default function ViewGame() {
     const[name, setName] = useState("")
     const[release_year, setRYear] = useState("")
     const[genre, setGenre] = useState("")
-    const[short_desc, setSDesc] = useState("")
-    const[long_desc, setLDesc] = useState("")
+    const[description, setDescription] = useState("")
 
 
     useEffect(() => {
@@ -26,8 +25,7 @@ export default function ViewGame() {
             setName(game_data.name)
             setRYear(game_data.release_year)
             setGenre(game_data.genre)
-            setSDesc(game_data.short_desc)
-            setLDesc(game_data.long_desc)
+            setDescription(game_data.description)
         }
         catch (error) {
             alert("Erro ao carregar o jogo! ", error.message)
@@ -45,24 +43,20 @@ export default function ViewGame() {
                     <p>{id}</p>
                     <hr/>
 
-                    <h5 className="font-weight-bold">Name</h5>
+                    <h5 className="font-weight-bold">Nome</h5>
                     <p>{name}</p>
                     <hr/>
 
-                    <h5 className="font-weight-bold">Year</h5>
+                    <h5 className="font-weight-bold">Ano de Lançamento</h5>
                     <p>{release_year}</p>
                     <hr/>
 
-                    <h5 className="font-weight-bold">Genre</h5>
+                    <h5 className="font-weight-bold">Gênero</h5>
                     <p>{genre}</p>
                     <hr/>
 
-                    <h5 className="font-weight-bold">Short Description</h5>
-                    <p>{short_desc}</p>
-                    <hr/>
-
-                    <h5 className="font-weight-bold">Long Description</h5>
-                    <p>{long_desc}</p>
+                    <h5 className="font-weight-bold">Descrição</h5>
+                    <p>{description}</p>
                     <hr/>
 
                     <Link className="btn btn-primary mx-3 mt-4" to={"/admin_games"}>Voltar</Link>

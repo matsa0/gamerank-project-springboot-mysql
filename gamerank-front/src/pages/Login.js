@@ -44,6 +44,7 @@ export default function Login() {
                         navigate("/admin_games")
                         return;
                     }
+                    alert("Login realizado com sucesso!")
                     navigate("/home")
                 }
                 else {

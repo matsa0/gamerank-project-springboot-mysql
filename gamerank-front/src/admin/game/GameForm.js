@@ -11,8 +11,8 @@ export default function GameForm() {
     const[name, setName] = useState("")
     const[release_year, setRYear] = useState("")
     const[genre, setGenre] = useState("")
-    const[short_desc, setSDesc] = useState("")
-    const[long_desc, setLDesc] = useState("")
+    const[description, setDescription] = useState("")
+    const[url_image, setUrlImage] = useState("")
 
     {/*Manipulador de eventos. Lida com o evento onChange() nos campos do form*/}
     {/*
@@ -30,11 +30,11 @@ export default function GameForm() {
     const onGenreChange=(e)=> {
         setGenre(e.target.value)
     }
-    const onSDescChange=(e)=> {
-        setSDesc(e.target.value)
+    const onDescriptionChange=(e)=> {
+        setDescription(e.target.value)
     }
-    const onLDescChange=(e)=> {
-        setLDesc(e.target.value)
+    const onUrlImageChange=(e)=> {
+        setUrlImage(e.target.value)
     }
 
     const onSubmit= async(e)=>{
@@ -45,8 +45,8 @@ export default function GameForm() {
             name: name,
             release_year: release_year,
             genre: genre,
-            short_desc: short_desc,
-            long_desc: long_desc
+            description: description,
+            url_image: url_image
         }
 
         try {
@@ -86,17 +86,17 @@ export default function GameForm() {
                             />
                         </div>
                         <div className="form-group mb-2">
-                            <label for="exampleInputSDesc" className='mb-1'>Descrição curta</label>
-                            <input type="text" className="form-control" id="exampleInputSDesc" placeholder="Descrição curta" 
-                            value={short_desc} 
-                            onChange={(e)=>onSDescChange(e)} required
+                            <label for="exampleInputSDesc" className='mb-1'>Descrição</label>
+                            <input type="text" className="form-control" id="exampleInputDescription" placeholder="Descrição" 
+                            value={description} 
+                            onChange={(e)=>onDescriptionChange(e)} required
                             />
                         </div>
                         <div className="form-group mb-2">
-                            <label for="exampleInputLDesc" className='mb-1'>Descrição completa</label>
-                            <input type="text" className="form-control" id="exampleInputLDesc" placeholder="Descrição Completa" 
-                            value={long_desc} 
-                            onChange={(e)=>onLDescChange(e)} required
+                            <label for="exampleInputLDesc" className='mb-1'>URL da imagem</label>
+                            <input type="text" className="form-control" id="exampleInputUrlImage" placeholder="URL da imagem" 
+                            value={url_image} 
+                            onChange={(e)=>onUrlImageChange(e)} 
                             />
                         </div>
 

@@ -12,8 +12,8 @@ export default function InsertForm() {
     const[name, setName] = useState("")
     const[release_year, setRYear] = useState("")
     const[genre, setGenre] = useState("")
-    const[short_desc, setSDesc] = useState("")
-    const[long_desc, setLDesc] = useState("")
+    const[description, setDescription] = useState("")
+    const[url_image, setUrlImage] = useState("")
 
     const onNameChange=(e)=> {
         {/*e.target é o evento que está sendo alterado e .value pega o seu valor*/}
@@ -25,11 +25,11 @@ export default function InsertForm() {
     const onGenreChange=(e)=> {
         setGenre(e.target.value)
     }
-    const onSDescChange=(e)=> {
-        setSDesc(e.target.value)
+    const onDescriptionChange=(e)=> {
+        setDescription(e.target.value)
     }
-    const onLDescChange=(e)=> {
-        setLDesc(e.target.value)
+    const onUrlImageChange=(e)=> {
+        setUrlImage(e.target.value)
     }
 
     const onSubmit=async(e)=> {
@@ -40,8 +40,8 @@ export default function InsertForm() {
             name: name,
             release_year: release_year,
             genre: genre,
-            short_desc: short_desc,
-            long_desc: long_desc
+            description: description,
+            url_image: url_image
         }
 
         try {
@@ -64,8 +64,8 @@ export default function InsertForm() {
             setName(game_data.name)
             setRYear(game_data.release_year)
             setGenre(game_data.genre)
-            setSDesc(game_data.short_desc)
-            setLDesc(game_data.long_desc)
+            setDescription(game_data.description)
+            setUrlImage(game_data.url_image)
         }
         catch(error) {
             alert("Erro ao carregar os dados do jogo! ", error.message)
@@ -108,19 +108,20 @@ export default function InsertForm() {
                             />
                         </div>
                         <div className="form-group mb-2">
-                            <label for="exampleInputSDesc" className='mb-1'>Descrição curta</label>
-                            <input type="text" className="form-control" id="exampleInputSDesc" placeholder="Descrição curta" 
-                            value={short_desc} 
-                            onChange={(e)=>onSDescChange(e)}
+                            <label for="exampleInputDesc" className='mb-1'>Descrição</label>
+                            <input type="text" className="form-control" id="exampleInputDesc" placeholder="Descrição" 
+                            value={description} 
+                            onChange={(e)=>onDescriptionChange(e)}
                             />
                         </div>
                         <div className="form-group mb-2">
-                            <label for="exampleInputLDesc" className='mb-1'>Descrição completa</label>
-                            <input type="text" className="form-control" id="exampleInputLDesc" placeholder="Descrição Completa" 
-                            value={long_desc} 
-                            onChange={(e)=>onLDescChange(e)}
+                            <label for="exampleInputSDesc" className='mb-1'>URL da imagem</label>
+                            <input type="text" className="form-control" id="exampleInputSDesc" placeholder="URL da imagem" 
+                            value={url_image} 
+                            onChange={(e)=>onUrlImageChange(e)}
                             />
                         </div>
+
 
                         <button type="submit" className="btn btn-success mt-4">Atualizar</button>
                         <Link className="btn btn-danger mx-3 mt-4" to={"/admin_games"}>Voltar</Link>

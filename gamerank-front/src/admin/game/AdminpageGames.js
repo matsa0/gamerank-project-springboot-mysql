@@ -35,8 +35,7 @@ export default function Adminpage() {
                         <th scope="col">Nome</th>
                         <th scope="col">Ano</th>
                         <th scope="col">Gênero</th>
-                        <th scope="col">Desc curta</th>
-                        <th scope="col">Desc completa</th>
+                        <th scope="col">Descrição</th>
                         <th scope="col">Ação</th>
                         </tr>
                     </thead>
@@ -49,17 +48,14 @@ export default function Adminpage() {
                                     <td>{game.name}</td>
                                     <td>{game.release_year}</td>
                                     <td>{game.genre}</td>
-                                    <td>{game.short_desc}</td>
-                                    <td>{game.long_desc}</td>
-                                    <td className = "align-middle">
-                                        <div className = "d-flex ">
-                                            <Link className = "btn btn-outline-success bi bi-eye" to={`/view_game/${game.id}`} />
+                                    <td>{game.description}</td>
+                                    <td className = "align-middle">                                       
+                                        <Link className = "btn btn-outline-success bi bi-eye" to={`/view_game/${game.id}`} />
 
-                                            <Link className = "btn btn-outline-primary bi bi-arrow-repeat mx-2" to={`/update_game/${game.id}`}/>
+                                        <Link className = "btn btn-outline-primary bi bi-arrow-repeat mx-2" to={`/update_game/${game.id}`}/>
 
-                                            <i className = "btn btn-outline-danger bi bi-dash-lg"
-                                            onClick={()=>deleteGame(game.id)}></i>
-                                        </div>
+                                        <i className = "btn btn-outline-danger bi bi-dash-lg"
+                                        onClick={()=>deleteGame(game.id)}></i>
                                     </td>
                                 </tr>
                             )) //create new array for call the api
