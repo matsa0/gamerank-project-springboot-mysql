@@ -1,7 +1,7 @@
 package com.matsadev.gamerank.models;
 
 import java.io.Serializable;
-
+import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -37,8 +37,8 @@ public class User implements Serializable {
     private String password;
     
     @JsonIgnore
-    @OneToMany(mappedBy = "user") //Um usuário pode ter várias reviews
-    private Set<Review> review;
+    @OneToMany(mappedBy = "user") //Um usuário pode fazer várias reviews
+    private Set<Review> reviews = new HashSet<>();
     
 
     //UserDto to User conversion

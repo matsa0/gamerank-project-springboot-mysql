@@ -41,6 +41,10 @@ public class Review {
     @ManyToOne //Muitas reviews para um usuário
     @JoinColumn(name = "user_id")
     private User user;
+
+    @ManyToOne //Muitas reviews para um jogo
+    @JoinColumn(name = "game_id")
+    private Game game;
     
     
     public Review(ReviewDto dto) {
