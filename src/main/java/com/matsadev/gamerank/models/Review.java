@@ -1,6 +1,8 @@
 package com.matsadev.gamerank.models;
 
 
+import java.io.Serializable;
+
 import com.matsadev.gamerank.models.dtos.ReviewDto;
 
 import jakarta.persistence.Entity;
@@ -27,8 +29,9 @@ import lombok.Setter;
 @EqualsAndHashCode(of = "id")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Review {
-    
+public class Review implements Serializable {
+    public static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

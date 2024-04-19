@@ -13,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -40,6 +41,8 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user") //Um usuário pode fazer várias reviews
     private Set<Review> reviews = new HashSet<>();
     
+    @OneToOne(mappedBy = "id.user") //acessando o campo user da WishlistPk pela Wishlist
+    private Wishlist wishlist;
 
     //UserDto to User conversion
     public User(UserDto dto) {

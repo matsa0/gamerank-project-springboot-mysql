@@ -34,10 +34,10 @@ public class TestConfig implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        User u1 = new User(null, "matsa", "6337311", null);
+        User u1 = new User(null, "matsa", "6337311", null, null);
         userRepository.save(u1);
 
-        Game g1 = new Game(null, "Snake Game", 1987, "Puzzle", 0, null, "Eat all the apples!", null);
+        Game g1 = new Game(null, "Snake Game", 1987, "Puzzle", 0, null, "Eat all the apples!", null, null);
         gameRepository.save(g1);
 
         Review r1 = new Review(null, "Very good game", 5, u1, g1);

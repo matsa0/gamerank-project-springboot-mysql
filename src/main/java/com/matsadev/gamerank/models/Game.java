@@ -47,6 +47,10 @@ public class Game implements Serializable {
     @OneToMany(mappedBy = "game") //Um Game pode ter várias Reviews
     private Set<Review> reviews = new HashSet<>();
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "id.game") //acessando o campo games da WishlistPk pela Wishlist
+    private Set<Wishlist> wishlists = new HashSet<>();
+
     //conversion GameDto to Game
     public Game(GameDto dto) {
         this.name = dto.name();
