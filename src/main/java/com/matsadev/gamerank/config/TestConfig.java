@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Profile;
 import com.matsadev.gamerank.models.Game;
 import com.matsadev.gamerank.models.Review;
 import com.matsadev.gamerank.models.User;
+import com.matsadev.gamerank.models.Wishlist;
+import com.matsadev.gamerank.models.pk.WishlistPk;
 import com.matsadev.gamerank.repositories.GameRepository;
 import com.matsadev.gamerank.repositories.ReviewRepository;
 import com.matsadev.gamerank.repositories.UserRepository;
@@ -46,6 +48,7 @@ public class TestConfig implements CommandLineRunner {
         g1.setReviews(new HashSet<>());
         g1.getReviews().add(r1);
         gameRepository.save(g1);
+
       
     }
     
