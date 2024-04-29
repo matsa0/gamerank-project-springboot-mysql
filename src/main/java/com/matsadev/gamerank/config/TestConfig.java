@@ -39,6 +39,9 @@ public class TestConfig implements CommandLineRunner {
         User u1 = new User(null, "matsa", "6337311", null, null);
         userRepository.save(u1);
 
+        User u2 = new User(null, "admin", "admin", null, null);
+        userRepository.save(u2);
+
         Game g1 = new Game(null, "Snake Game", 1987, "Puzzle", 0, null, "Eat all the apples!", null, null);
         gameRepository.save(g1);
 
