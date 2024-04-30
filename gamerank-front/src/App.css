@@ -95,6 +95,79 @@
 /*LOGIN*/
 .login-scope {
   padding: 3rem;
+  max-width: 650px;
+}
+
+.login-background {
+  background-image: linear-gradient(to top, #682bd7, #20113d, #171717);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-scope h2 {
+  font-family: "Oswald";
+  color: white;
+  text-transform: uppercase;
+  font-size: 64px;
+}
+.login-scope h2 label {
+  color: #682bd7;
+}
+
+.login-input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.login-input-box label {
+  color: white;
+  font-family: "Oswald";
+  font-size: 22px;
+  text-align: left;
+}
+
+.login-input-box input {
+  background-color: #D9D9D9;
+}
+.login-input-box input::placeholder {
+  font-family: "Oswald";
+  font-size: 20px;
+  color: #171717;
+  font-weight: 300;
+}
+
+.login-scope p {
+  color: white;
+  font-family: "Oswald";
+  font-size: 18px;
+  padding-top: 10px;
+}
+.login-scope .register-link{
+  color: white;
+  text-decoration: none;
+}
+
+.btn-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 15px;
+}
+
+.login-btn {
+  width: 149px;
+  height: 48px;
+  background-color: #682bd7 !important;
+  font-family: "Oswald" !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: flex-start;
 }
 
 

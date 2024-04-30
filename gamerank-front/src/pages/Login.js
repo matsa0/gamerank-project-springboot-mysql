@@ -64,24 +64,28 @@ export default function Login() {
 
 
     return (
-        <div className="login container d-flex justify-content-center align-items-center">
-            <div className="login-scope border shadow">
-                <h2 className="mb-4">Entre no Gamerank!</h2>
-                <form onSubmit={(e)=>onSubmit(e)}>
-                    <div className="form-group mb-2">
-                        <label for="exampleInputUsername" className='mb-1 text-left'>Username</label>
-                        <input type="text" className="form-control" placeholder="Username" 
-                        onChange={(e)=>onUsernameChange(e)} value={username} required/>
-                    </div>
-                    <div className="form-group mb-2">
-                        <label for="exampleInputPassword" className='mb-1'>Senha</label>
-                        <input type="password" className="form-control" placeholder="Senha" 
-                        onChange={(e)=>onPasswordChange(e)} value={password} required/>
-                    </div>
+        <div className="login-background">
+            <div className="container d-flex justify-content-center">
+                <div className="login-scope">
+                    <h2 className="mb-4">Entre no <label>Gamerank!</label></h2>
+                    <form onSubmit={(e)=>onSubmit(e)}>
+                        <div className="login-input-box form-group mb-2">
+                            <label for="exampleInputUsername" className='mb-1 text-left'>Username</label>
+                            <input type="text" className="form-control" placeholder="Username" 
+                            onChange={(e)=>onUsernameChange(e)} value={username} required/>
+                        </div>
+                        <div className="login-input-box form-group mb-2">
+                            <label for="exampleInputPassword" className='mb-1'>Senha</label>
+                            <input type="password" className="form-control" placeholder="Senha" 
+                            onChange={(e)=>onPasswordChange(e)} value={password} required/>
+                        </div>
 
-                    <button type="submit" className="btn btn-success mt-4">Entrar</button>
-                    <p className="mt-2">Não possui cadastro? <Link to={"/register"}>Cadastrar agora!</Link></p>
-                </form>
+                        <div className="btn-section">
+                            <button type="submit" className="login-btn btn btn-success mt-4">Entre!</button>
+                            <p className="mt-2">Não tem uma conta? <label className="register-link"><Link to={"/register"}>Cadastrar agora!</Link></label></p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     )
