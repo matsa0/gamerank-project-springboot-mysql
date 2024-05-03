@@ -12,9 +12,9 @@ import UserForm from './admin/user/UserForm';
 import ViewUser from './admin/user/ViewUser';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Home from './pages/Home';
 import FirstPage from './pages/FirstPage';
 import Navbar from './layout/Navbar';
+import Categories from './pages/Categories';
 
 function App() {
   return (
@@ -98,10 +98,10 @@ function App() {
             </>
           }/>
 
-          <Route exact path = "/home" element = {
+          <Route exact path = "/categories" element = {
             <>
               <Navbar />
-              <Home />
+              <Categories />
             </>
           }/>
           

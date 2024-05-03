@@ -174,8 +174,35 @@
 
 
 
-/*REGISTER*/
+/*NAVBAR-MAIN*/
+.logo-gamerank {
+  font-family: "Oswald";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #682bd7;
+  font-size: 33px ;
+}
 
-.register-scope {
-  padding: 3rem;
+.main-navbar {
+  max-width: 1250px;
+}
+
+.nav-items {
+  padding-left: 50px;
+  display: flex;
+}
+.nav-item {
+  font-family: "Oswald";
+  font-size: 20px;
+  padding: 0 15px 0 0;
+}
+
+.profile-item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-icon {
+  font-size: 30px;
+
 }
