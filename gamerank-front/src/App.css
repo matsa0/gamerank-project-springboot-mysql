@@ -1,12 +1,9 @@
 /*GENERAL*/
 .App {
   text-align: center;
-}
-
-.home, .first-page, .register, .login {
+  background-color: #171717;
   height: 100vh;
 }
-
 
 /*FIRST PAGE*/
 .first-page {
@@ -16,11 +13,11 @@
 .fp-custom-container {
   margin: auto;
   max-width: 1116px;
-  height: 550px;
 }
 
 .fp-background {
   background-image: linear-gradient(60deg, #682bd7, #20113d, #000000);
+  height: 100%;
 }
 
 .main-title-fp {
@@ -204,5 +201,7 @@
 
 .profile-icon {
   font-size: 30px;
-
 }
+
+
+/*CATEGORIES*/

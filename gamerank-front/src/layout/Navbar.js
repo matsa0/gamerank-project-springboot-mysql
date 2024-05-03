@@ -32,7 +32,7 @@ export default function Navbar () {
     }
 
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg">
         <div className="main-navbar container-fluid">
             <Link class="navbar-brand" to={"/categories"}><label className="logo-gamerank">Gamerank!</label></Link>
             <div class="nav-items collapse navbar-collapse">

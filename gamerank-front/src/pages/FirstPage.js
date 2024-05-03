@@ -5,7 +5,7 @@ export default function FirstPage() {
 
     return (
         <div className="fp-background">
-            <div className="first-page fp-custom-container justify-content-center">
+            <div className="first-page fp-custom-container d-flex justify-content-center">
                 <div className="row">
                     <div className="col text-center">
                         <h1 className="main-title-fp">BEM VINDO AO <label>GAMERANK!</label></h1>
