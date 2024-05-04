@@ -53,7 +53,7 @@ export default function Register() {
     
                     if(resp_new_user.status == 201) {
                         alert("Cadastro realizado com sucesso!")
-                        navigate("/home")
+                        navigate("/categories")
                         return; //evita que o código abaixo seja executado
                     }
                     else {

@@ -46,7 +46,7 @@ export default function Login() {
                         return;
                     }
                     alert("Login realizado com sucesso!")
-                    navigate("/home")
+                    navigate("/categories")
                 }
                 else {
                     alert("Credenciais incorretas! Tente novamente.")

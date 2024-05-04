@@ -10,6 +10,20 @@
   padding-top: 250px;
 }
 
+@media screen and (max-width: 1440px) {
+  .first-page {
+    padding-top: 150px;
+  }
+
+  .fp-cards {
+    padding-top: 25px !important;
+  }
+
+  .popular-title {
+    padding-top: 20px;
+  }
+}
+
 .fp-custom-container {
   margin: auto;
   max-width: 1116px;
@@ -53,7 +67,8 @@
 .fp-custom-container-2 {
   margin: auto;
   max-width: 1116px;
-  height: 454px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .fp-cards {
@@ -78,6 +93,7 @@
   font-size: 24px;
   color: white;
   text-align: left;
+  padding-top: 25px;
 }
 
 .fp-paragraph {
