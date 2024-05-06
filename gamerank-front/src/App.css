@@ -7,6 +7,8 @@
   font-family: "Oswald";
 }
 
+
+
 /*FIRST PAGE*/
 .first-page {
   padding-top: 250px;
@@ -217,3 +219,16 @@
 }
 
 /*CATEGORIES*/
+.cards-categories {
+  padding-top: 60px;
+}
+
+.card-categories {
+  width: 160px;
+  height: 203px;
+  border: solid 3px #20113D !important;
+  border-top-left-radius: 0% !important;
+  border-top-right-radius: 0% !important;
+  border-bottom-left-radius: 0% !important;
+  border-bottom-right-radius: 0% !important;
+}
