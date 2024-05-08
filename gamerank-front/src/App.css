@@ -2,7 +2,6 @@
 .App {
   text-align: center;
   background-color: #171717;
-  height: 100vh;
   color: white;
   font-family: "Oswald";
 }
@@ -35,7 +34,7 @@
 
 .fp-background {
   background-image: linear-gradient(60deg, #682bd7, #20113d, #000000);
-  height: 100%;
+  height: 100vh;
 }
 
 .main-title-fp {
@@ -185,7 +184,7 @@
 }
 
 .main-navbar {
-  max-width: 1250px;
+  padding-bottom: 50px;
 }
 
 .nav-items {
@@ -219,8 +218,23 @@
 }
 
 /*CATEGORIES*/
-.cards-categories {
-  padding-top: 60px;
+/*
+.container-fluid {
+  padding-left: 100px !important;
+}
+*/
+
+.container-cards-categories {
+  padding-bottom: 25px;
+}
+
+.grid-categories-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-cards-categories h2 {
+  text-align: start;
 }
 
 .card-categories {

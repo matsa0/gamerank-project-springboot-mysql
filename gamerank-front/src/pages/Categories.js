@@ -24,8 +24,12 @@ export default function Categories() {
                 //adiciona o jogo atual à lista de jogos associada ao gênero correspondente
                 gamesByGenre[game.genre].push(game)
             });
-            setGenres(gamesByGenre)
-            console.log(gamesByGenre)
+            
+            const sortedGames = Object.keys(gamesByGenre).sort() //sorted = ordenados
+            setGenres(sortedGames.map(genre => ({ //Para cada gênero no array sortedGenres, faça um mapeamento.
+                genre, //o gênero
+                games: gamesByGenre[genre] //lista de jogos correspondente do gênero
+            })))
         })
         .catch((err) => {
             console.log('Error > ', err)
@@ -33,16 +37,16 @@ export default function Categories() {
     }, [])
 
     return (
-        <div className="categories container">
-            {/* Object.keys retorna um array contendo as chaves do objeto genres */}
-            {Object.keys(genres).map(genre => (
-                <div key={genre}>
+        <div className="container">
+            {/* mapeia o array genres e pega o gênero e os games correspondentes */}
+            {genres.map(({genre, games}) => (
+                <div key={genre} className="container-cards-categories">
                     {/* Cada gênero é usado como chave única para identificar o elemento no DOM */}
                     <h2>{genre}</h2>
-                    <div className="row">
+                    <div className="row grid-categories-cards">
                         {/* O método map é usado para iterar sobre os jogos de cada gênero */}
-                        {genres[genre].map(game => (
-                            <div key={game.id} className="col">
+                        {games.map(game => (
+                            <div key={game.id} className="col-2 px-0 m-2">
                                 {/* Cada jogo é representado por um componente Card */}
                                 <Card url_image={game.url_image} name={game.name}></Card>
                             </div>
@@ -51,6 +55,7 @@ export default function Categories() {
                 </div>
             ))}
         </div>
+        
     )
     
 }

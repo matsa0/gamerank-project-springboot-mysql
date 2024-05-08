@@ -33,7 +33,7 @@ export default function Navbar () {
 
     return (
         <nav class="navbar navbar-expand-lg">
-            <div className="main-navbar container-fluid">
+            <div className="main-navbar container">
                 <Link class="navbar-brand" to={"/categories"}><label className="logo-gamerank">Gamerank!</label></Link>
                 <div class="nav-items collapse navbar-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
