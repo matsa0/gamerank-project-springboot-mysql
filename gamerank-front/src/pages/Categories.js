@@ -43,7 +43,7 @@ export default function Categories() {
                 <div key={genre} className="container-cards-categories">
                     {/* Cada gênero é usado como chave única para identificar o elemento no DOM */}
                     <h2>{genre}</h2>
-                    <div className="row grid-categories-cards">
+                    <div className="row">
                         {/* O método map é usado para iterar sobre os jogos de cada gênero */}
                         {games.map(game => (
                             <div key={game.id} className="col-2 px-0 m-2">
@@ -55,7 +55,6 @@ export default function Categories() {
                 </div>
             ))}
         </div>
-        
     )
     
 }

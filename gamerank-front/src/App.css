@@ -223,24 +223,37 @@
   padding-left: 100px !important;
 }
 */
+.card {
+  background-color: transparent !important;
+}
 
 .container-cards-categories {
   padding-bottom: 25px;
 }
 
-.grid-categories-cards {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .container-cards-categories h2 {
   text-align: start;
+  font-size: 24px;
+}
+
+.container-unique-card {
+  width: 154px;
+  height: 244px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-unique-card p{
+  text-align: center;
+  font-family: 'Petrona';
+  font-size: 157x;
 }
 
 .card-categories {
-  width: 160px;
-  height: 203px;
-  border: solid 3px #20113D !important;
+  width: 136px;
+  height: 204px;
   border-top-left-radius: 0% !important;
   border-top-right-radius: 0% !important;
   border-bottom-left-radius: 0% !important;

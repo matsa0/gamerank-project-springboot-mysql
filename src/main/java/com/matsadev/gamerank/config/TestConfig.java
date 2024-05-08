@@ -49,8 +49,13 @@ public class TestConfig implements CommandLineRunner {
         Game g7 = new Game(null, "Crash Bandicoot: The Wrath of Cortex'", 2001, "Plataforma", 0, "https://cdn2.steamgriddb.com/thumb/8f525be9215d86f58355460286cccd32.jpg", "Warped introduz habilidades especiais e veículos para Crash, além de uma variedade de fases diferentes. O jogo é considerado um ponto alto na série Crash Bandicoot.", null, null);
         Game g8 = new Game(null, "Crash Twinsanity", 2004, "Aventura", 0, "https://cdn2.steamgriddb.com/thumb/2d76b54ba6edfbfbf547c7c2e76ed586.jpg", "Twinsanity apresenta uma narrativa única e humorística, mantendo a jogabilidade clássica da série. Os jogadores exploram ambientes abertos e participam de várias interações entre Crash e Cortex.", null, null);
         Game g9 = new Game(null, "Crash of the Titans", 2007, "Ação", 0, "https://cdn2.steamgriddb.com/thumb/bc6dec9604a8492c23cbd2a647918586.png", "Crash of the Titans introduz mecânicas de combate mais robustas e a capacidade de controlar inimigos. O jogo mantém o estilo humorístico da série Crash Bandicoot.", null, null);
+        Game g10 = new Game(null, "Bloodborne", 2015, "Souls Like", 0, "https://cdn2.steamgriddb.com/thumb/021399af062379408df9c358a1a83cdb.jpg", "Bloodborne é conhecido por sua jogabilidade desafiadora, atmosfera macabra e design de níveis intricado. O jogo é ambientado em um mundo gótico-horror e é altamente elogiado pela crítica.", null, null);
+        Game g11 = new Game(null, "Bloodborne", 2015, "Souls Like", 0, "https://cdn2.steamgriddb.com/thumb/021399af062379408df9c358a1a83cdb.jpg", "Bloodborne é conhecido por sua jogabilidade desafiadora, atmosfera macabra e design de níveis intricado. O jogo é ambientado em um mundo gótico-horror e é altamente elogiado pela crítica.", null, null);
+        Game g12 = new Game(null, "Bloodborne", 2015, "Souls Like", 0, "https://cdn2.steamgriddb.com/thumb/021399af062379408df9c358a1a83cdb.jpg", "Bloodborne é conhecido por sua jogabilidade desafiadora, atmosfera macabra e design de níveis intricado. O jogo é ambientado em um mundo gótico-horror e é altamente elogiado pela crítica.", null, null);
+        Game g13 = new Game(null, "Bloodborne", 2015, "Souls Like", 0, "https://cdn2.steamgriddb.com/thumb/021399af062379408df9c358a1a83cdb.jpg", "Bloodborne é conhecido por sua jogabilidade desafiadora, atmosfera macabra e design de níveis intricado. O jogo é ambientado em um mundo gótico-horror e é altamente elogiado pela crítica.", null, null);
 
-        List<Game> games = Arrays.asList(g1,g2,g3,g4,g5,g6,g7,g8,g9);
+
+        List<Game> games = Arrays.asList(g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g11,g12,g13);
         gameRepository.saveAll(games);
 
         Review r1 = new Review(null, "Very good game", 5, u1, g1);
