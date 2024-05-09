@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../categories_components/Card";
+import { Link } from "react-router-dom";
 
 export default function Categories() {
 
@@ -44,14 +45,15 @@ export default function Categories() {
                     {/* Cada gênero é usado como chave única para identificar o elemento no DOM */}
                     <h2>{genre}</h2>
                     <div className="row">
-                        {/* O método map é usado para iterar sobre os jogos de cada gênero */}
-                        {games.map(game => (
-                            <div key={game.id} className="col-2 px-0 m-2">
+                        {/* slice(index[start], index[end]). O método map é usado para iterar sobre os jogos de cada gênero */}
+                        {games.slice(0, 6).map(game => (
+                            <div key={game.id} className="col-2">
                                 {/* Cada jogo é representado por um componente Card */}
                                 <Card url_image={game.url_image} name={game.name}></Card>
                             </div>
                         ))}
                     </div>
+                    <Link className="view-all" to={`/categories/${genre}`}>Ver Tudo</Link>
                 </div>
             ))}
         </div>

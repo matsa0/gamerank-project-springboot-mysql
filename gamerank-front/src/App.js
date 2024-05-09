@@ -105,7 +105,11 @@ function App() {
             </>
           }/>
           
-
+          <Route exact path = "/categories/:genre" element = {
+            <>
+              <Navbar/>
+            </>
+          }/>
 
 
         </Routes>

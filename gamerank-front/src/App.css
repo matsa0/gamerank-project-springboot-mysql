@@ -218,23 +218,35 @@
 }
 
 /*CATEGORIES*/
-/*
-.container-fluid {
-  padding-left: 100px !important;
-}
-*/
 .card {
   background-color: transparent !important;
 }
 
 .container-cards-categories {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
   padding-bottom: 25px;
 }
-
 
 .container-cards-categories h2 {
   text-align: start;
   font-size: 24px;
+}
+
+.container-cards-categories .view-all {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.container-cards-categories .view-all:hover {
+  color: #682bd7;
+  transition: 600ms;
 }
 
 .container-unique-card {
