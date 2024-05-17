@@ -15,6 +15,7 @@ import Register from './pages/Register';
 import FirstPage from './pages/FirstPage';
 import Navbar from './layout/Navbar';
 import Categories from './pages/Categories';
+import CategoriesForGenre from './pages/CategoriesForGenre';
 
 function App() {
   return (
@@ -108,6 +109,7 @@ function App() {
           <Route exact path = "/categories/:genre" element = {
             <>
               <Navbar/>
+              <CategoriesForGenre />
             </>
           }/>
 

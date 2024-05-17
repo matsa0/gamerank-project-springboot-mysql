@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.matsadev.gamerank.models.Game;
 import com.matsadev.gamerank.models.dtos.GameDto;
 import com.matsadev.gamerank.services.GameService;
-
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
 
@@ -42,6 +42,18 @@ public class GameResource {
     public ResponseEntity<List<Game>> findAll() {
         List<Game> list = service.findAll();
 
+        return new ResponseEntity<>(list, HttpStatus.OK);
+    }
+
+    @GetMapping("/genre/{genre}")
+    public ResponseEntity<List<Game>> findGamesByGenre(@PathVariable(value = "genre", required = false) String genre) {
+        List<Game> list;
+
+        if(genre != null) {
+            list = service.findGamesByGenre(genre);
+        } else {
+            list = service.findAll();
+        }
         return new ResponseEntity<>(list, HttpStatus.OK);
     }
 

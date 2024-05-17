@@ -29,6 +29,10 @@ public class GameService {
         return repository.findAll();
     }
 
+    public List<Game> findGamesByGenre(String genre) {
+        return repository.findByGenre(genre);
+    }   
+
     public Game insert(GameDto dto) {
         Game newGame = new Game(dto);
 
