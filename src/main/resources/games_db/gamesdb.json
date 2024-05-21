@@ -1,0 +1,151 @@
+{
+    "jogos": [
+      {
+        "nome": "The Witcher 3: Wild Hunt",
+        "anoDeLancamento": "2015",
+        "genero": "RPG",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/2f87d717bf556321774d1b4975d2e1c1.png",
+        "descricao": "The Witcher 3: Wild Hunt é um RPG de mundo aberto, ambientado em um mundo de fantasia sombria, baseado na série de livros de Andrzej Sapkowski."
+      },
+      {
+        "nome": "Red Dead Redemption 2",
+        "anoDeLancamento": "2018",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/3940304b536796dcc176aa83203a3955.png",
+        "descricao": "Red Dead Redemption 2 é um épico de mundo aberto ambientado no final do século XIX, onde você joga como Arthur Morgan, um fora-da-lei e membro da gangue Van der Linde."
+      },
+      {
+        "nome": "The Legend of Zelda: Breath of the Wild",
+        "anoDeLancamento": "2017",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/3c64afe806cd466dd1ffecbe3e2e8cce.png",
+        "descricao": "The Legend of Zelda: Breath of the Wild é um jogo de ação e aventura em mundo aberto, parte da série The Legend of Zelda, onde os jogadores controlam Link, que acorda de um sono de cem anos para derrotar Calamity Ganon antes que ele destrua o reino de Hyrule."
+      },
+      {
+        "nome": "Cyberpunk 2077",
+        "anoDeLancamento": "2020",
+        "genero": "RPG de Ação",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/4030e2eebb977639f8836aa25a293e40.png",
+        "descricao": "Cyberpunk 2077 é um RPG de ação de mundo aberto situado em Night City, uma megalópole obcecada por poder, glamour e biomodificações. Você joga como V, um mercenário fora da lei atrás de um implante único que é a chave da imortalidade."
+      },
+      {
+        "nome": "God of War",
+        "anoDeLancamento": "2018",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/5855660034a74cfe0e5fc8d57d17f4ac.png",
+        "descricao": "God of War é um jogo de ação e aventura que segue Kratos, um guerreiro espartano que enfrenta criaturas mitológicas enquanto tenta se redimir de seus pecados do passado."
+      },
+      {
+        "nome": "Uncharted 4: A Thief's End",
+        "anoDeLancamento": "2016",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/a72753a5ec2242d72f8c63a60337cc34.png",
+        "descricao": "Uncharted 4: A Thief's End é um jogo de ação e aventura que segue Nathan Drake enquanto ele busca o tesouro perdido do capitão pirata Henry Avery."
+      },
+      {
+        "nome": "Horizon Zero Dawn",
+        "anoDeLancamento": "2017",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/abd673b91e4bb9c556da84c6f6f5d470.png",
+        "descricao": "Horizon Zero Dawn é um jogo de ação e RPG ambientado em um mundo pós-apocalíptico dominado por criaturas robóticas, onde os jogadores controlam Aloy, uma caçadora em busca de sua verdadeira origem."
+      },
+      {
+        "nome": "Assassin's Creed Valhalla",
+        "anoDeLancamento": "2020",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/70d91733e8e78a47fd1a0fbdabea2d10.png",
+        "descricao": "Assassin's Creed Valhalla é um RPG de ação ambientado na era dos vikings, onde os jogadores assumem o papel de Eivor, um guerreiro viking em uma jornada para conquistar a Inglaterra."
+      },
+      {
+        "nome": "Grand Theft Auto V",
+        "anoDeLancamento": "2013",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/7a87609a1305e8c75748d20fd3a410ba.jpg",
+        "descricao": "Grand Theft Auto V é um jogo de ação e aventura ambientado no estado fictício de San Andreas, onde os jogadores podem controlar três personagens e realizar missões de roubo e outros crimes."
+      },
+      {
+        "nome": "Minecraft",
+        "anoDeLancamento": "2011",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/1a22f0ef3aec25d1cb15d26895d13b88.png",
+        "descricao": "Minecraft é um jogo de construção sandbox onde os jogadores podem criar e explorar mundos feitos de blocos, coletar recursos e construir estruturas incríveis."
+      },
+      {
+        "nome": "Call of Duty: Modern Warfare",
+        "anoDeLancamento": "2019",
+        "genero": "FPS",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/0bc22e1c47f26addd1907b4931e507b1.png",
+        "descricao": "Call of Duty: Modern Warfare é um jogo de tiro em primeira pessoa que traz uma experiência moderna e realista de combate, com modos de campanha, multiplayer e cooperação."
+      },
+      {
+        "nome": "The Last of Us Part II",
+        "anoDeLancamento": "2020",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/55655e3296788419699ec577c7a76f6b.png",
+        "descricao": "The Last of Us Part II é um jogo de ação e aventura ambientado em um mundo pós-apocalíptico, onde os jogadores seguem a história de Ellie em busca de vingança e sobrevivência."
+      },
+      {
+        "nome": "Elden Ring",
+        "anoDeLancamento": "2022",
+        "genero": "RPG de Ação",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/a0abf0396a718b8982fce0b80181d8cb.png",
+        "descricao": "Elden Ring é um RPG de ação desenvolvido pela FromSoftware, ambientado em um vasto mundo de fantasia cheio de desafios e segredos."
+      },
+      {
+        "nome": "Horizon Forbidden West",
+        "anoDeLancamento": "2022",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/243227589f0e65da5a872cdd20f66f41.webp",
+        "descricao": "Horizon Forbidden West continua a história de Aloy enquanto ela viaja para o oeste pós-apocalíptico para investigar uma praga misteriosa."
+      },
+      {
+        "nome": "God of War: Ragnarok",
+        "anoDeLancamento": "2022",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/eb16bda6d6cd57dd2bf30c288e004356.jpg",
+        "descricao": "God of War: Ragnarok é a sequência de God of War (2018), onde Kratos e Atreus enfrentam novos desafios e inimigos mitológicos."
+      },
+      {
+        "nome": "Starfield",
+        "anoDeLancamento": "2023",
+        "genero": "RPG de Ação",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/ac79bc4536e67368f7a054716ebdf36f.png",
+        "descricao": "Starfield é um RPG de ação e ficção científica desenvolvido pela Bethesda, ambientado no espaço sideral, onde os jogadores exploram planetas e sistemas estelares."
+      },
+      {
+        "nome": "The Legend of Zelda: Tears of the Kingdom",
+        "anoDeLancamento": "2023",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/ae758fbcbd5bd841516c53b3c08ebc6f.png",
+        "descricao": "The Legend of Zelda: Tears of the Kingdom é a sequência de Breath of the Wild, onde Link deve enfrentar novos desafios e salvar Hyrule mais uma vez."
+      },
+      {
+        "nome": "Hogwarts Legacy",
+        "anoDeLancamento": "2023",
+        "genero": "RPG de Ação",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/081030432eca5f57fb868d09f3a9006f.png",
+        "descricao": "Hogwarts Legacy é um RPG de ação ambientado no mundo mágico de Harry Potter, onde os jogadores criam seu próprio bruxo e exploram a famosa escola de magia."
+      },
+      {
+        "nome": "A Plague Tale: Requiem",
+        "anoDeLancamento": "2022",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/276004f2c93dfa42b9c55302e206386f.png",
+        "descricao": "A Plague Tale: Requiem é a sequência de A Plague Tale: Innocence, onde Amicia e Hugo enfrentam novos desafios em um mundo devastado pela peste."
+      },
+      {
+        "nome": "Bayonetta 3",
+        "anoDeLancamento": "2022",
+        "genero": "Ação e Aventura",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/886995438c8f55ae8934ba6b86d8ca5d.jpg",
+        "descricao": "Bayonetta 3 é um jogo de ação hack and slash onde os jogadores controlam a bruxa Bayonetta em batalhas épicas contra inimigos sobrenaturais."
+      },
+      {
+        "nome": "Final Fantasy XVI",
+        "anoDeLancamento": "2023",
+        "genero": "RPG",
+        "urlImagem": "https://cdn2.steamgriddb.com/grid/9245c6b6ad413336553235bfbb257ef6.png",
+        "descricao": "Final Fantasy XVI é o mais recente título da série Final Fantasy, apresentando uma história épica de fantasia com novos personagens e mundos para explorar."
+      }
+    ]
+  }

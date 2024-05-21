@@ -4,6 +4,8 @@
   background-color: #171717;
   color: white;
   font-family: "Oswald";
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -270,4 +272,11 @@
   border-top-right-radius: 0% !important;
   border-bottom-left-radius: 0% !important;
   border-bottom-right-radius: 0% !important;
+}
+
+/*CATEGORIES FOR GENRE*/
+.categories-for-genres-bg {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }

@@ -26,19 +26,21 @@ export default function CategoriesForGenre() {
 
     return (
         <div className="container">
-            <div key={genre} className="container-cards-categories">
-                <h2>{genre}</h2>
-                <div className="row">
-                    {/* O método map é usado para iterar sobre os jogos de cada gênero */}
-                    {games.map(game => (
-                        <div key={game.id} className="col-2">
-                            {/* Cada jogo é representado por um componente Card */}
-                            <Card url_image={game.url_image} name={game.name}></Card>
-                        </div>
-                    ))}
+            <div className='categories-for-genres-bg'>
+                <div key={genre} className="container-cards-categories">
+                    <h2>{genre}</h2>
+                    <div className="row">
+                        {/* O método map é usado para iterar sobre os jogos de cada gênero */}
+                        {games.map(game => (
+                            <div key={game.id} className="col-2">
+                                {/* Cada jogo é representado por um componente Card */}
+                                <Card url_image={game.url_image} name={game.name}></Card>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     )
 }

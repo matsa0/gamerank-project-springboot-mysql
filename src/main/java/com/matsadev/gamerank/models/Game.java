@@ -36,11 +36,11 @@ public class Game implements Serializable {
     private Long id;
     @NotBlank
     private String name;
-    private int release_year;
+    private String release_year;
     private String genre;
     private double avg_note;
     private String url_image;
-    @Column(length = 1200)
+    @Column(length = 30000)
     private String description;
 
     @JsonIgnore
