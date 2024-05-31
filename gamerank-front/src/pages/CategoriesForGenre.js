@@ -13,6 +13,12 @@ export default function CategoriesForGenre() {
     const { genre } = useParams()
     const[games, setGames] = useState([])
     const[isOpen, setIsOpen] = useState(false)
+    const[selectedGame, setSelectedGame] = useState(null)
+
+    const handleCardClick = (game) => {
+        setIsOpen(true)
+        setSelectedGame(game)
+    }
 
     useEffect(() => {
         fetch(`http://localhost:8080/games/genre/${genre}`)
@@ -36,13 +42,30 @@ export default function CategoriesForGenre() {
                         {games.map(game => (
                             <div key={game.id} className="col-2">
                                 {/* Cada jogo é representado por um componente Card */}
-                                <Card url_image={game.url_image} name={game.name} onClick={() => setIsOpen(true)}></Card>
+                                <Card url_image={game.url_image} name={game.name} onClick={() => handleCardClick(game)}></Card>
 
                                 <Modal open={isOpen}>
                                     <p>{game.name}</p>
                                 </Modal>
                             </div>
                         ))}
+                        <Modal open={isOpen}>
+                            {selectedGame && (
+                                <div className="container modal-content">
+                                    <i className="bi bi-x-lg modal-close-button" onClick={() => setIsOpen(false)}></i>
+                                    <div className="modal-top-infos">
+                                        <img src={`${selectedGame.url_image}`} alt={`Capa do jogo ${selectedGame.name}`}></img>
+                                        <div className="modal-details">
+                                            <div className="modal-header">
+                                                <h2>{selectedGame.name}</h2>
+                                                <p className="modal-game-year">{selectedGame.release_year}</p>
+                                            </div>
+                                            <p className="modal-game-description">{selectedGame.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </Modal>
                     </div>
                 </div>
             </div>

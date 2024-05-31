@@ -72,19 +72,22 @@ export default function Categories() {
                     <div className="container modal-content">
                         <i className="bi bi-x-lg modal-close-button" onClick={() => setIsOpen(false)}></i>
                         <div className="modal-top-infos">
-                            <div className="modal-header-and-image">
-                                <img src={`${selectedGame.url_image}`} alt={`Capa do jogo ${selectedGame.name}`}></img>
+                            <img src={`${selectedGame.url_image}`} alt={`Capa do jogo ${selectedGame.name}`}></img>
+                            <div className="modal-details">
                                 <div className="modal-header">
                                     <h2>{selectedGame.name}</h2>
                                     <p className="modal-game-year">{selectedGame.release_year}</p>
+                                    <label className="avg-note">
+                                        <i className="avg-note-icon bi bi-star-fill"></i>  
+                                        {selectedGame.avg_note}
+                                    </label>
                                 </div>
+                                <p className="modal-game-description">{selectedGame.description}</p>
                             </div>
-                            <p className="modal-game-description">{selectedGame.description}</p>
                         </div>
                     </div>
                 )}
             </Modal>
-
         </div>
     )
     

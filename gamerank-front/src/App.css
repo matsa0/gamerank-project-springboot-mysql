@@ -255,12 +255,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  cursor: pointer;
 }
 
 .container-unique-card p{
   text-align: center;
   font-family: 'Petrona';
-  font-size: 157x;
 }
 
 .card-categories {
@@ -282,6 +282,7 @@
   color: white;
   padding: 50px;
   z-index: 1000;
+  box-shadow: 10px 10px 5px #682bd7;
 }
 
 .overlay-modal {
@@ -295,23 +296,32 @@
 }
 
 .modal-content .modal-close-button {
+  display: flex;
   justify-content: flex-end;
   color: #682bd7;
   font-size: 30px;
+  cursor: pointer; 
 }
 
 .modal-top-infos {
   display: flex;
-  flex-direction: column; /* Coloca todos os elementos em coluna */
+  align-items: flex-start; 
 }
 
-.modal-header-and-image {
-  display: flex; /* Coloca a imagem e o cabeçalho lado a lado */
-  align-items: flex-start; /* Alinha os itens ao início (topo) */
+.modal-top-infos img {
+  width: 163px;
+  height: 244px;
+  margin-right: 20px; /* Espaço entre a imagem e os detalhes */
+}
+
+.modal-details {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-header {
   display: flex;
+  align-items: center; 
   gap: 10px;
 }
 
@@ -319,23 +329,35 @@
   font-family: 'Oswald';
   font-size: 32px;
   text-transform: uppercase;
+  margin: 0; /* Remove margem padrão */
 }
 
 .modal-header .modal-game-year {
   font-family: 'Petrona';
   font-size: 24px;
+  margin: 0; /* Remove margem padrão */
 }
+
+.modal-header .avg-note-icon {
+  color: yellow;
+  font-size: 25px;
+  padding-right: 5px;
+}
+
+.modal-header .avg-note {
+  color: white;
+  font-family: 'Petrona';
+  margin-left: auto;
+  font-size: 23px;
+}
+
 
 .modal-game-description {
   font-size: 20px;
   font-family: 'Petrona';
+  margin-top: 10px; /* Espaço acima da descrição */
 }
 
-.modal-top-infos img {
-  width: 163px;
-  height: 244px;
-  margin-right: 20px; /* Espaço entre a imagem e o cabeçalho */
-}
 
 
 
