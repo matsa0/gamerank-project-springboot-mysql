@@ -16,6 +16,7 @@ import FirstPage from './pages/FirstPage';
 import Navbar from './layout/Navbar';
 import Categories from './pages/Categories';
 import CategoriesForGenre from './pages/CategoriesForGenre';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -113,6 +114,13 @@ function App() {
             </>
           }/>
 
+          <Route exact path = "/profile" element = {
+            <>
+              <Navbar/>
+              <Profile/>
+            </>
+          }
+          />
 
         </Routes>
       </Router>

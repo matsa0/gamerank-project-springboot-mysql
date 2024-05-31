@@ -8,8 +8,6 @@
   padding: 0;
 }
 
-
-
 /*FIRST PAGE*/
 .first-page {
   padding-top: 250px;
@@ -273,6 +271,74 @@
   border-bottom-left-radius: 0% !important;
   border-bottom-right-radius: 0% !important;
 }
+
+/*MODAL*/
+.modal-style {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2B2A2A;
+  color: white;
+  padding: 50px;
+  z-index: 1000;
+}
+
+.overlay-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.6);
+  z-index: 1000;
+}
+
+.modal-content .modal-close-button {
+  justify-content: flex-end;
+  color: #682bd7;
+  font-size: 30px;
+}
+
+.modal-top-infos {
+  display: flex;
+  flex-direction: column; /* Coloca todos os elementos em coluna */
+}
+
+.modal-header-and-image {
+  display: flex; /* Coloca a imagem e o cabeçalho lado a lado */
+  align-items: flex-start; /* Alinha os itens ao início (topo) */
+}
+
+.modal-header {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-header h2 {
+  font-family: 'Oswald';
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.modal-header .modal-game-year {
+  font-family: 'Petrona';
+  font-size: 24px;
+}
+
+.modal-game-description {
+  font-size: 20px;
+  font-family: 'Petrona';
+}
+
+.modal-top-infos img {
+  width: 163px;
+  height: 244px;
+  margin-right: 20px; /* Espaço entre a imagem e o cabeçalho */
+}
+
+
+
 
 /*CATEGORIES FOR GENRE*/
 .categories-for-genres-bg {

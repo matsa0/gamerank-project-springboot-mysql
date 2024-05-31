@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from "../categories_components/Card";
 import { useParams } from 'react-router-dom';
+import Modal from '../categories_components/Modal';
 
 export default function CategoriesForGenre() {
     /*
@@ -11,6 +12,7 @@ export default function CategoriesForGenre() {
     */
     const { genre } = useParams()
     const[games, setGames] = useState([])
+    const[isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         fetch(`http://localhost:8080/games/genre/${genre}`)
@@ -34,12 +36,15 @@ export default function CategoriesForGenre() {
                         {games.map(game => (
                             <div key={game.id} className="col-2">
                                 {/* Cada jogo é representado por um componente Card */}
-                                <Card url_image={game.url_image} name={game.name}></Card>
+                                <Card url_image={game.url_image} name={game.name} onClick={() => setIsOpen(true)}></Card>
+
+                                <Modal open={isOpen}>
+                                    <p>{game.name}</p>
+                                </Modal>
                             </div>
                         ))}
                     </div>
                 </div>
-
             </div>
         </div>
     )

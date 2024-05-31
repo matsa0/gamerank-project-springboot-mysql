@@ -22,6 +22,20 @@
         "descricao": "The Legend of Zelda: Breath of the Wild é um jogo de ação e aventura em mundo aberto, parte da série The Legend of Zelda, onde os jogadores controlam Link, que acorda de um sono de cem anos para derrotar Calamity Ganon antes que ele destrua o reino de Hyrule."
       },
       {
+        "nome": "Resident Evil 4",
+        "anoDeLancamento": "2005",
+        "genero": "Survival Horror",
+        "urlImagem": "https://cdn2.steamgriddb.com/thumb/4c55cc422cab2389c9f1d88eda34da57.jpg",
+        "descricao": "Resident Evil 4 segue Leon S. Kennedy em uma missão para resgatar a filha do presidente dos EUA, que foi sequestrada por um culto misterioso na Europa. O jogo é elogiado por sua jogabilidade inovadora e atmosfera envolvente."
+      },
+      {
+        "nome": "Resident Evil Village",
+        "anoDeLancamento": "2021",
+        "genero": "Survival Horror",
+        "urlImagem": "https://cdn2.steamgriddb.com/thumb/f5d01993fbb44f107bb340e433df194f.jpg",
+        "descricao": "Os jogadores enfrentarão horrores em uma vila misteriosa enquanto tentam resgatar sua filha sequestrada. Resident Evil Village é elogiado por sua atmosfera envolvente e design de níveis."
+      },
+      {
         "nome": "Cyberpunk 2077",
         "anoDeLancamento": "2020",
         "genero": "RPG de Ação",

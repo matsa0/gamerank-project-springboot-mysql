@@ -48,7 +48,7 @@ export default function Navbar () {
                     </ul>
                     <ul className="profile-item navbar-nav">
                         <li className={`nav-item ${activeItem === "profile" ? "active" : ""}`}>
-                            <Link ref={profileRef} onClick={() => handleItemClick('profile')} className="nav-link profile-link">
+                            <Link ref={profileRef} onClick={() => handleItemClick('profile')} className="nav-link profile-link" to={"/profile"}>
                                 <i class="profile-icon bi bi-person-circle"></i>
                             </Link>
                         </li>
